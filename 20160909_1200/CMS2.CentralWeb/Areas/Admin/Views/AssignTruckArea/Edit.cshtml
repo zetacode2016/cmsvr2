@@ -1,0 +1,77 @@
+﻿@model CMS2.Entities.TruckAreaMapping
+<br />
+<h4>Truck Area Assignment - Edit</h4>
+
+@using (Html.BeginForm("Edit", "AssignTruckArea", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    @Html.HiddenFor(m => m.TruckAreaMappingId)
+
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.RevenueUnitId, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                    @Html.DropDownListFor(m => m.RevenueUnitId, (SelectList)ViewBag.Areas, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TruckId, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                    @Html.DropDownListFor(m => m.TruckId, (SelectList)ViewBag.Trucks, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.DateAssigned, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                    @Html.TextBoxFor(m => m.DateAssigned, new { @class = "form-control datecontrol" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        &nbsp;
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="margin:0">
+            <input id="saveButton" type="submit" class="btn btn-default" value="Save" />
+            <input id="cancelButton" type="button" class="btn btn-default" value="Cancel" onclick="CancelInputForm();" />
+        </div>
+    </div>
+}
+@section scripts{
+
+    <script>
+
+        $(function () {
+            $('.datecontrol').datepicker({dateformat:"MM/dd/yyyy"});
+        });
+
+    </script>
+}

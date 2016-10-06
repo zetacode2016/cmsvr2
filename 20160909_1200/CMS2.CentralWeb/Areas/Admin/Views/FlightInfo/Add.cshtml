@@ -1,0 +1,132 @@
+﻿@model CMS2.CentralWeb.Areas.Admin.ViewModels.FlightInfoViewModel
+<br />
+<h4>Flight Info - Add</h4>
+
+@using (Html.BeginForm("Add", "FlightInfo", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(m => m.GatewayId, new { @class = "control-label col-md-2", @style = "width:15%; padding-right: 5px" })
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.GatewayId, (SelectList)ViewBag.Gateways, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(m => m.OriginCityId, new { @class = "control-label col-md-2", @style = "width:15%; padding-right: 5px" })
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.OriginBcoId, (SelectList)ViewBag.OriginBcos, new { @class = "form-control" })
+                </div>
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.OriginCityId, (SelectList)ViewBag.OriginCities, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(m => m.DestinationCityId, new {@class = "control-label col-md-2", @style = "width:15%; padding-right: 5px"})
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.DestinationBcoId, (SelectList) ViewBag.DestinationBcos, new {@class = "form-control"})
+                </div>
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.DestinationCityId, (SelectList) ViewBag.DestinationCities, new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(m => m.FlightNo, new {@class = "control-label col-md-2", @style = "width:15%; padding-right: 5px"})
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.FlightNo, new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ETD, new {@class = "control-label col-md-2", @style = "width:15%; padding-right: 5px"})
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.ETD, new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ETA, new { @class = "control-label col-md-2", @style = "width:15%; padding-right: 5px" })
+                <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.ETA, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 15%; padding-right: 5px">&nbsp;</div>
+                <div class="col-md-3" style="width: 8%; padding-left: 5px">
+                    <input id="saveButton" type="submit" class="btn btn-default" value="Save"/>
+                </div>
+                <div class="col-md-3" style="width: 8%; padding-left: 5px">
+                    <input id="cancelButton" type="button" class="btn btn-default" value="Cancel" onclick="Cancel();" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section scripts
+{
+    <script type="text/javascript">
+
+        $("#OriginBcoId").on("change", function () {
+            $("#OriginCityId").empty();
+                $.ajax({
+                    type: 'Post',
+                    url: '@Url.Action("GetCities")',
+                    dataType: 'json',
+                    data: { bcoId: $("#OriginBcoId").val() },
+                    success: function (units) {
+                        $.each(units, function (i, unit) {
+                            $("#OriginCityId").append('<option value="' + unit.value + '">' + unit.text + '</option>');
+                        });
+                    },
+                    error: function (ex) {
+                    }
+                });
+                return false;
+        });
+
+        $("#DestinationBcoId").on("change", function () {
+            $("#DestinationCityId").empty();
+            $.ajax({
+                type: 'Post',
+                url: '@Url.Action("GetCities")',
+                dataType: 'json',
+                data: { bcoId: $("#DestinationBcoId").val() },
+                success: function (units) {
+                    $.each(units, function (i, unit) {
+                        $("#DestinationCityId").append('<option value="' + unit.value + '">' + unit.text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                }
+            });
+            return false;
+        });
+
+    </script>
+}

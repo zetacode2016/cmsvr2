@@ -1,0 +1,125 @@
+﻿@model CMS2.Entities.TrackingEntities.Models.TransmittalQueryViewModel
+@using GridMvc.Html
+
+<br />
+<h4>Airline Transmittal Report</h4>
+
+@using (Html.BeginForm("Transmittal", "Tracking", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TransmittalDate, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.TransmittalDate, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.cAirlineName, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.cAirlineName, (SelectList)ViewBag.Airlines, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.OriginBranch, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.OriginBranch, (SelectList)ViewBag.Branches, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.cStatusName, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.cStatusName, (SelectList)ViewBag.Status, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.MasterAirwayBill, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.MasterAirwayBill, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        &nbsp;
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="margin:0">
+            <input id="searchButton" type="submit" class="btn btn-default" value="Search" />
+        </div>
+    </div>
+
+}
+<form class="col-md-12 form-horizontal " role="form">
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @{
+                    if (Model.TransmittalViewModels != null)
+                    {
+                        @Html.Grid(Model.TransmittalViewModels).Named("gridTranmittal").Columns(columns =>
+                    {
+                        columns.Add(m => m.TransmittalDateString).Titled("Transmittal Date").Sortable(true).Filterable(true);
+                        columns.Add(m => m.Airline).Titled("Airline").Sortable(true).Filterable(true);
+                        columns.Add(m => m.OriginBranch).Titled("Origin").Sortable(true).Filterable(true);
+                        columns.Add(m => m.DestinationBranchCode).Titled("Destination").Sortable(true).Filterable(true);
+                        columns.Add(m => m.TranmittalStatus).Titled("Status/Type").Sortable(true).Filterable(true);
+                        columns.Add(m => m.MasterAirwayBill).Titled("Master AWB").Sortable(true).Filterable(true);
+                        columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="Tracking/PrintMasterAwb?sackNo=@m.MasterAirwayBill">Print</a>);
+                    }).WithPaging(20)
+                    }
+}
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+</form>

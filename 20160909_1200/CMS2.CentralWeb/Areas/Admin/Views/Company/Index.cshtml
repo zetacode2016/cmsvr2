@@ -1,0 +1,23 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Company>
+<br/>
+<h4>Company</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridCompany").Columns(columns =>
+        {
+            columns.Add(m => m.AccountNo).Titled("Account No").Sortable(true).Filterable(true);
+            columns.Add(m => m.CompanyName).Titled("Name").Sortable(true).Filterable(true).Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="Company/Details?id=@m.CompanyId">@m.CompanyName</a>);
+            columns.Add(m => m.MotherCompany.CompanyName).Titled("Mother Company").Sortable(true).Filterable(true).RenderValueAs(m => m.MotherCompany == null ? "not linked" : m.MotherCompany.CompanyName);
+            columns.Add(m => m.ApprovedDate).Titled("Date Approved").Sortable(true).Filterable(true).RenderValueAs(m => m.ApprovedDate.ToShortDateString());
+            columns.Add(m => m.AccountStatus.AccountStatusName).Titled("Account Status").Sortable(true).Filterable(true);
+            columns.Add().Titled("Reps").Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink("View","Index","Client",new {id = m.CompanyId},null));
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink("Edit", "Edit", "Company", new {id = m.CompanyId}, null));
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink("Delete", "Delete", "Company", new { id = m.CompanyId }, null));
+        }).WithPaging(30)
+    }
+}
+<br/>
+@Html.ActionLink("Add Company", "Add", null, new { @class = "btn btn-default" })

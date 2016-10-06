@@ -1,0 +1,11 @@
+2015/11/25 11:59:09 :: SOA BL - CreateSavePdfFile :: Load report failed.
+2015/11/25 15:20:06 :: Shipment BL - ComputeCharges - SOA is not null :: The added or subtracted value results in an un-representable DateTime.
+Parameter name: value
+2015/11/25 15:20:08 :: Shipment BL - ComputeCharges - SOA is not null :: The added or subtracted value results in an un-representable DateTime.
+Parameter name: value
+2015/11/25 15:20:41 :: Shipment BL - ComputeCharges - SOA is not null :: The added or subtracted value results in an un-representable DateTime.
+Parameter name: value
+2015/11/25 15:21:04 :: Shipment BL - ComputeCharges - SOA is not null :: The added or subtracted value results in an un-representable DateTime.
+Parameter name: value
+2015/11/25 16:36:27 :: SOA BL - CreateSavePdfFile :: Load report failed.
+2015/11/25 16:48:48 :: SOA BL - CreateSavePdfFile :: Load report failed.

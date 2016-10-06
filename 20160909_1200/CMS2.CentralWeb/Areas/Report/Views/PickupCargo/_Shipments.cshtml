@@ -1,0 +1,116 @@
+﻿@using GridMvc.Html
+@model CMS2.CentralWeb.Areas.Report.ViewModels.PickupShipmentViewModel
+
+<hr />
+<br />
+<div class="col-md-12 col-md-push-1" style="margin:0">
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TransactionDate, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.TransactionDate, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.AwbCount, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.AwbCount, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.BranchCorpOffice, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.BranchCorpOffice, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TotalWeight, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.TotalWeight, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Area, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.Area, new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ItemCount, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.ItemCount, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Driver, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.Driver, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Checker, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m=>m.Checker, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+               
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-12" style="margin: 0">
+            @{
+                if (Model != null)
+                {
+                    if (Model.Shipments != null)
+                    {
+                        @Html.Grid(Model.Shipments).Named("gridShipments").Columns(columns =>
+                        {
+                            columns.Add(m => m.AirwayBillNo).Titled("AWB").Sortable(true).Filterable(true);
+                            columns.Add(m => m.Weight).Titled("Weight").Sortable(true).Filterable(true);
+                            columns.Add(m => m.Quantity).Titled("Quantity").Sortable(true).Filterable(true);
+                            columns.Add(m => m.Shipper).Titled("Shipper").Sortable(true).Filterable(true);
+                            columns.Add(m => m.ShipperAddress).Titled("ShipperAddress").Sortable(true).Filterable(true);
+                            columns.Add(m => m.OriginCity).Titled("Origin City").Sortable(true).Filterable(true);
+                            columns.Add(m => m.Consignee).Titled("Consignee").Sortable(true).Filterable(true);
+                            columns.Add(m => m.DestinationCity).Titled("Destination City").Sortable(true).Filterable(true);
+                            columns.Add(m => m.PickedUpBy).Titled("PickedUp By").Sortable(true).Filterable(true);
+                        }).WithPaging(30)
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>

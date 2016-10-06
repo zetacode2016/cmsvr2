@@ -1,0 +1,81 @@
+2015/12/24 12:46:14 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/12/24 12:46:14 :: Shipment BL - ComputeCharges :: 54a1ffa6-0dfe-4fab-b82d-d99e63260133
+2015/12/24 12:46:14 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/12/24 12:46:14 :: Shipment BL - ComputeCharges - Done :: 
+2015/12/24 13:27:10 :: SOA Controller - Create :: 
+2015/12/24 13:27:10 :: SOA BL - Create SOA :: MCO010100001
+2015/12/24 13:27:10 :: SOA BL - Create SOA :: Successfull
+2015/12/24 13:27:11 :: SOA BL - Finalize :: 
+2015/12/24 13:27:11 :: SOA BL - Finalize :: Successfull
+2015/12/24 13:27:11 :: SOA BL - Create and Save Pdf File :: 
+2015/12/24 13:27:11 :: SOA BL - ComputeSoa :: 00000
+2015/12/24 13:27:11 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: 8f6750c7-c94a-46b7-aa9e-fec02efd7c27
+2015/12/24 13:27:11 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5e977685-1161-4e60-8a71-2044a4d40d1b
+2015/12/24 13:27:11 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 13:27:11 :: Shipment BL - GetUnpaidShipmentsByClientId :: 75688469-8dae-45db-826b-9b3e33ae18b5
+2015/12/24 13:27:11 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 13:27:11 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2015/12/24 13:27:11 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2015/12/24 13:27:11 :: SOA BL - ComputeSoa - Done :: 
+2015/12/24 13:27:28 :: SOA BL - CreateSavePdfFile :: Successfull
+2015/12/24 13:27:29 :: SOA Controller - Details (Get) :: 
+2015/12/24 16:54:12 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/12/24 16:54:12 :: Shipment BL - ComputeCharges :: 54a1ffa6-0dfe-4fab-b82d-d99e63260133
+2015/12/24 16:54:12 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/12/24 16:54:12 :: Shipment BL - ComputeCharges - Done :: 
+2015/12/24 17:07:53 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/12/24 17:07:53 :: Shipment BL - ComputeCharges :: 54a1ffa6-0dfe-4fab-b82d-d99e63260133
+2015/12/24 17:07:53 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/12/24 17:07:53 :: Shipment BL - ComputeCharges - Done :: 
+2015/12/24 17:08:02 :: SOA Controller - Create :: 
+2015/12/24 17:08:02 :: SOA BL - Create SOA :: MCO151220001
+2015/12/24 17:08:21 :: SOA BL - Create SOA :: Successfull
+2015/12/24 17:08:21 :: SOA BL - Finalize :: 
+2015/12/24 17:08:22 :: SOA BL - Finalize :: Successfull
+2015/12/24 17:08:22 :: SOA BL - Create and Save Pdf File :: 
+2015/12/24 17:08:22 :: SOA BL - ComputeSoa :: 00000
+2015/12/24 17:08:22 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: 8f6750c7-c94a-46b7-aa9e-fec02efd7c27
+2015/12/24 17:08:22 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5e977685-1161-4e60-8a71-2044a4d40d1b
+2015/12/24 17:08:22 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:08:22 :: Shipment BL - GetUnpaidShipmentsByClientId :: 75688469-8dae-45db-826b-9b3e33ae18b5
+2015/12/24 17:08:22 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:08:22 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2015/12/24 17:08:22 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2015/12/24 17:08:22 :: SOA BL - ComputeSoa - Done :: 
+2015/12/24 17:08:41 :: SOA BL - CreateSavePdfFile :: Successfull
+2015/12/24 17:08:42 :: SOA Controller - Details (Get) :: 
+2015/12/24 17:15:03 :: SOA Controller - Create :: 
+2015/12/24 17:15:03 :: SOA BL - Create SOA :: MCO151220001
+2015/12/24 17:15:39 :: SOA BL - Create SOA :: Successfull
+2015/12/24 17:15:40 :: SOA BL - Finalize :: 
+2015/12/24 17:15:40 :: SOA BL - Create and Save Pdf File :: 
+2015/12/24 17:15:40 :: SOA BL - ComputeSoa :: 00001
+2015/12/24 17:15:40 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: 8f6750c7-c94a-46b7-aa9e-fec02efd7c27
+2015/12/24 17:15:40 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5e977685-1161-4e60-8a71-2044a4d40d1b
+2015/12/24 17:15:40 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:15:40 :: Shipment BL - GetUnpaidShipmentsByClientId :: 75688469-8dae-45db-826b-9b3e33ae18b5
+2015/12/24 17:15:40 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:15:40 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2015/12/24 17:15:40 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2015/12/24 17:15:40 :: SOA BL - ComputeSoa - Done :: 
+2015/12/24 17:15:41 :: SOA BL - CreateSavePdfFile :: Successfull
+2015/12/24 17:15:42 :: SOA Controller - Details (Get) :: 
+2015/12/24 17:15:42 :: SOA BL - ComputeSoa :: 00001
+2015/12/24 17:15:42 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: 8f6750c7-c94a-46b7-aa9e-fec02efd7c27
+2015/12/24 17:15:42 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5e977685-1161-4e60-8a71-2044a4d40d1b
+2015/12/24 17:15:42 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:15:42 :: Shipment BL - GetUnpaidShipmentsByClientId :: 75688469-8dae-45db-826b-9b3e33ae18b5
+2015/12/24 17:15:42 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:15:42 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2015/12/24 17:15:42 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2015/12/24 17:15:42 :: SOA BL - ComputeSoa - Done :: 
+2015/12/24 17:26:47 :: SOA Controller - Details (Get) :: 
+2015/12/24 17:26:47 :: SOA BL - ComputeSoa :: 00001
+2015/12/24 17:26:47 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: 8f6750c7-c94a-46b7-aa9e-fec02efd7c27
+2015/12/24 17:26:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5e977685-1161-4e60-8a71-2044a4d40d1b
+2015/12/24 17:26:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:26:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: 75688469-8dae-45db-826b-9b3e33ae18b5
+2015/12/24 17:26:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/24 17:26:47 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2015/12/24 17:26:47 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2015/12/24 17:26:47 :: SOA BL - ComputeSoa - Done :: 

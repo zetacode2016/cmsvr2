@@ -1,0 +1,19 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.BillingPeriod>
+<br/>
+<h4>Billing Period</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridBillingPeriod").Columns(columns =>
+        {
+            columns.Add(m => m.BillingPeriodName).Titled("Billing Period").Sortable(true).Filterable(true);
+            columns.Add(m => m.NumberOfDays).Titled("Number of Days").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="BillingPeriod/Edit?id=@m.BillingPeriodId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="BillingPeriod/Delete?id=@m.BillingPeriodId">Delete</a>);
+        }).WithPaging(10)
+    }
+}
+<br/>
+@Html.ActionLink("Add Billing Period", "Add", null, new { @class = "btn btn-default" })

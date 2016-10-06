@@ -1,0 +1,48 @@
+2016/07/24 17:58:57 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/07/24 17:58:57 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 17:58:57 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 17:59:11 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/07/24 17:59:11 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 17:59:11 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 17:59:13 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/07/24 17:59:13 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 17:59:13 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:23:26 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:23:26 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:26:41 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:26:42 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:26:52 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:26:52 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:27:02 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:27:02 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:27:07 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:27:07 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:28:23 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:28:24 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:28:24 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/07/24 18:28:24 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:28:24 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:30:28 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:30:29 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:42:36 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:42:36 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:47:14 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:47:15 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:53:05 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:53:05 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:53:08 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:53:08 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:53:12 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:53:12 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:54:35 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:54:35 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 18:59:44 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 18:59:44 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 22:24:17 :: Shipment BL - ComputeCharges :: 3d608a53-a280-4d75-82b9-126f3a8c6a21
+2016/07/24 22:24:17 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 22:24:18 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 22:24:18 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 23:15:19 :: Shipment BL - ComputeCharges :: 3d608a53-a280-4d75-82b9-126f3a8c6a21
+2016/07/24 23:15:20 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/24 23:15:22 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/24 23:15:22 :: Shipment BL - ComputeCharges - Done :: 

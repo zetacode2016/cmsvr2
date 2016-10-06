@@ -1,0 +1,21 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.FuelSurcharge>
+<br />
+<h4>Fuel Surcharge</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridFuelSurcharge").Columns(columns =>
+        {
+            columns.Add(m => m.OriginGroup.GroupName).Titled("Origin").Sortable(true).Filterable(true);
+            columns.Add(m => m.DestinationGroup.GroupName).Titled("Destination").Sortable(true).Filterable(true);
+            columns.Add(m => m.AmountString).Titled("Amount").Sortable(true).Filterable(true);
+            columns.Add(m => m.EffectiveDateString).Titled("Effective Date").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="FuelSurcharge/Edit?id=@m.FuelSurchargeId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="FuelSurcharge/Delete?id=@m.FuelSurchargeId">Delete</a>);
+        }).WithPaging(10)
+    }
+}
+<br/>
+@Html.ActionLink("Add Fuel Surcharge", "Add", null, new { @class = "btn btn-default" })

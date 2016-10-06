@@ -1,0 +1,667 @@
+2016/07/25 00:10:24 :: SOA Controller - Details (Get) :: 
+2016/07/25 00:10:24 :: SOA BL - ComputeSoa :: 01017
+2016/07/25 00:10:25 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:10:26 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:10:27 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:27 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:10:27 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:27 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:10:27 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:27 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:10:27 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:27 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:10:27 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:27 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:10:27 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:27 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:10:27 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:10:27 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:10:48 :: SOA Controller - Create :: 
+2016/07/25 00:10:48 :: SOA BL - Create SOA :: MNL160715003
+2016/07/25 00:10:48 :: SOA BL - Create SOA :: Successfull
+2016/07/25 00:10:49 :: SOA BL - Finalize :: 
+2016/07/25 00:10:49 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 00:10:49 :: SOA BL - ComputeSoa :: 00012
+2016/07/25 00:10:49 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:10:49 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:10:49 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:49 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:10:49 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:49 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:10:49 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:49 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:10:49 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:49 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:10:49 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:49 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:10:49 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:10:49 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:10:49 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:10:49 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:11:03 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 00:11:03 :: SOA Controller - Details (Get) :: 
+2016/07/25 00:11:03 :: SOA BL - ComputeSoa :: 00012
+2016/07/25 00:11:03 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:11:03 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:11:03 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:11:03 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:11:03 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:11:03 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:11:03 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:11:03 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:11:03 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:11:03 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:11:03 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:11:03 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:11:03 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:11:03 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:11:03 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:11:03 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:16:17 :: SOA Controller - History :: 
+2016/07/25 00:16:17 :: SOA BL - GetByCompanyAccountNo :: 
+2016/07/25 00:16:17 :: SOA BL - ComputeSoa :: 00012
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa :: 01017
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:16:18 :: SOA BL - ComputeSoa :: 00011
+2016/07/25 00:16:18 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 00:16:19 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:16:19 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:19 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:19 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:19 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:19 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:19 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:16:19 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:16:19 :: Shipment BL - ComputeBalances :: 
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/25 00:16:19 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 00:16:19 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 00:16:19 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:16:19 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:35:43 :: SOA Controller - Details (Get) :: 
+2016/07/25 00:35:43 :: SOA BL - ComputeSoa :: 01017
+2016/07/25 00:35:44 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:35:44 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:35:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:35:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:35:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:35:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:35:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:35:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:47 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:35:47 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:35:47 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:35:54 :: SOA Controller - History :: 
+2016/07/25 00:35:54 :: SOA BL - GetByCompanyAccountNo :: 
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa :: 00012
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa :: 01017
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 00:35:55 :: SOA BL - ComputeSoa :: 00011
+2016/07/25 00:35:55 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 00:35:56 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: acd908ff-b71f-4923-816c-e3839a7febac
+2016/07/25 00:35:56 :: Shipment BL - GetUnpaidShipmentsByClientId :: f10e6330-5cf9-4b40-bd21-0ac7efbac7a5
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:56 :: Shipment BL - GetUnpaidShipmentsByClientId :: b0e570e0-1a6b-41c4-b70d-1931099466eb
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:56 :: Shipment BL - GetUnpaidShipmentsByClientId :: 096f1bad-74f5-40d2-bb6b-6990406f432d
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:56 :: Shipment BL - GetUnpaidShipmentsByClientId :: 5ed77290-1def-436b-ad8b-8b7df06cb1ee
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:56 :: Shipment BL - GetUnpaidShipmentsByClientId :: c564eb56-fb01-4d0f-8634-994ac9de00fb
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:56 :: Shipment BL - GetUnpaidShipmentsByClientId :: b921549e-5fbc-4c8d-a1c0-e2397ea81694
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 00:35:56 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 00:35:56 :: Shipment BL - ComputeBalances :: 
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges :: 6fcf6512-141e-4dbe-96b1-463d8e88d9dd
+2016/07/25 00:35:56 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 00:35:56 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 00:35:56 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 00:35:56 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:13:05 :: SOA Controller - Create :: 
+2016/07/25 23:13:05 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:13:06 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:13:13 :: SOA BL - Finalize :: 
+2016/07/25 23:13:13 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:13:13 :: SOA BL - ComputeSoa :: 03031
+2016/07/25 23:13:23 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:13:25 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:13:26 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:13:27 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:13:33 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:13:33 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:13:38 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:13:49 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:13:49 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:13:49 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:13:51 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:13:51 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:13:52 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:13:52 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:13:53 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:13:53 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:13:53 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:13:53 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:14:17 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:14:18 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:14:19 :: SOA BL - ComputeSoa :: 03031
+2016/07/25 23:14:22 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:14:24 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:14:25 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:14:27 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:14:27 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:14:27 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:14:29 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:14:33 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:14:33 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:14:33 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:14:38 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:14:38 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:14:39 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:14:39 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:14:41 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:14:41 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:14:41 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:14:41 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:15:38 :: SOA Controller - Create :: 
+2016/07/25 23:15:38 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:15:40 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:15:46 :: SOA BL - Finalize :: 
+2016/07/25 23:15:46 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:15:46 :: SOA BL - ComputeSoa :: 03032
+2016/07/25 23:15:48 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:15:50 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:15:52 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:15:54 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:15:54 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:15:54 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:15:59 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:16:28 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:16:28 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:16:28 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:16:30 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:16:30 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:16:30 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:16:30 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:16:33 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:16:33 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:16:33 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:16:33 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:16:34 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:16:35 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:16:36 :: SOA BL - ComputeSoa :: 03032
+2016/07/25 23:16:41 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:16:43 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:16:45 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:16:47 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:16:47 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:16:47 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:16:51 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:18:58 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:18:58 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:18:58 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:19:00 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:19:00 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:19:00 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:19:00 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:19:02 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:19:02 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:19:02 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:19:02 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:22:11 :: SOA Controller - Create :: 
+2016/07/25 23:22:11 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:22:13 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:22:19 :: SOA BL - Finalize :: 
+2016/07/25 23:22:19 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:22:19 :: SOA BL - ComputeSoa :: 03033
+2016/07/25 23:22:22 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:22:24 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:22:26 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:22:28 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:22:28 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:22:28 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:22:31 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:22:38 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:22:38 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:22:38 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:22:39 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:22:39 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:22:39 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:22:39 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:22:40 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:22:40 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:22:41 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:22:41 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:22:42 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:22:43 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:22:44 :: SOA BL - ComputeSoa :: 03033
+2016/07/25 23:22:48 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:22:49 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:22:50 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:22:52 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:22:52 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:22:52 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:22:54 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:22:57 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:22:57 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:22:57 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:22:59 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:22:59 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:22:59 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:22:59 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:23:00 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:23:00 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:23:00 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:23:00 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:23:30 :: SOA Controller - Create :: 
+2016/07/25 23:23:30 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:23:32 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:23:40 :: SOA BL - Finalize :: 
+2016/07/25 23:23:40 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:23:40 :: SOA BL - ComputeSoa :: 03034
+2016/07/25 23:23:42 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:23:44 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:23:45 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:23:46 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:23:46 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:23:46 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:23:48 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:24:35 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:24:35 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:24:35 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:24:37 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:24:37 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:24:37 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:24:37 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:24:39 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:24:39 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:24:39 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:24:39 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:24:40 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:24:41 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:27:21 :: SOA Controller - Create :: 
+2016/07/25 23:27:21 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:27:23 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:35:25 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:35:28 :: SOA BL - ComputeSoa :: 03035
+2016/07/25 23:35:31 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:35:33 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:35:40 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:35:40 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:35:40 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:35:40 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:41:23 :: SOA Controller - Create :: 
+2016/07/25 23:41:23 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:41:27 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:41:49 :: SOA BL - Finalize :: 
+2016/07/25 23:41:49 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:41:49 :: SOA BL - ComputeSoa :: 03036
+2016/07/25 23:41:53 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:41:56 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:41:57 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:42:00 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:42:00 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:42:00 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:42:04 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:42:04 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:42:04 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:42:04 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:42:05 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:42:05 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:42:05 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:42:05 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:42:07 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:42:07 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:42:07 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:42:07 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:42:09 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:42:10 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:42:10 :: SOA BL - ComputeSoa :: 03036
+2016/07/25 23:42:16 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:42:19 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:42:22 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:42:26 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:42:26 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:42:26 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:42:30 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:42:31 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:42:31 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:42:31 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:42:35 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:42:35 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:42:35 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:42:35 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:42:38 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:42:38 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:42:39 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:42:39 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:43:53 :: SOA Controller - Create :: 
+2016/07/25 23:43:53 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:43:56 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:44:06 :: SOA BL - Finalize :: 
+2016/07/25 23:44:06 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:44:06 :: SOA BL - ComputeSoa :: 03037
+2016/07/25 23:44:11 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:44:15 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:44:16 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:44:19 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:44:19 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:44:21 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:44:21 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:44:21 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:44:24 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:44:24 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:44:24 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:44:24 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:44:26 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:44:26 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:44:26 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:44:26 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:44:28 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:44:28 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:44:29 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:44:29 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:44:30 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:44:30 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:44:31 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:44:31 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:44:32 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:44:34 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:44:38 :: SOA BL - ComputeSoa :: 03037
+2016/07/25 23:44:51 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:44:58 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:45:01 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:45:05 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:45:12 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:45:15 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:45:15 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:45:16 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:45:19 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/07/25 23:45:20 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:45:20 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:45:20 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:45:24 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:45:24 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:45:24 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:45:24 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:45:26 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:45:26 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:45:26 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:45:26 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:45:28 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:45:28 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:45:28 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:45:28 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:52:07 :: SOA Controller - Create :: 
+2016/07/25 23:52:07 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:52:09 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:52:20 :: SOA BL - Finalize :: 
+2016/07/25 23:52:20 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:52:20 :: SOA BL - ComputeSoa :: 03038
+2016/07/25 23:52:30 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:52:43 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:52:47 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:52:57 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:52:57 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:52:58 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:53:09 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:53:13 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:16 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:53:19 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:20 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:53:23 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:24 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:53:26 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:27 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:53:30 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:30 :: Shipment BL - ComputeCharges :: Shipment count: 5
+2016/07/25 23:53:30 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:53:32 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:32 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:53:34 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:34 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:53:36 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:36 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:53:38 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:38 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:53:40 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:40 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:53:40 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:53:40 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:53:43 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:43 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:53:43 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:53:43 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:53:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:45 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:53:46 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:53:46 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:53:49 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:53:50 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:53:51 :: SOA BL - ComputeSoa :: 03038
+2016/07/25 23:53:55 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:53:57 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:53:59 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:54:02 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:54:02 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:54:02 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:54:06 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:54:09 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:54:10 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:54:11 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:54:13 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:54:15 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:54:16 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:54:18 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:54:19 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:54:22 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:54:22 :: Shipment BL - ComputeCharges :: Shipment count: 5
+2016/07/25 23:54:22 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:54:59 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:54:59 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:55:05 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:55:05 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:55:09 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:55:09 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:55:15 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:55:15 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:55:20 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:55:21 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:55:21 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:55:21 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:55:25 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:55:25 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:55:25 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:55:25 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:55:27 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:55:27 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:55:28 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:55:28 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:56:02 :: SOA Controller - Create :: 
+2016/07/25 23:56:02 :: SOA BL - Create SOA :: MNL160715004
+2016/07/25 23:56:04 :: SOA BL - Create SOA :: Successfull
+2016/07/25 23:56:15 :: SOA BL - Finalize :: 
+2016/07/25 23:56:15 :: SOA BL - Create and Save Pdf File :: 
+2016/07/25 23:56:15 :: SOA BL - ComputeSoa :: 03039
+2016/07/25 23:56:19 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:56:22 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:56:24 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:56:27 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:56:29 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:56:32 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:56:32 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:56:32 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:56:37 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:56:42 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:56:44 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:56:47 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:56:49 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:56:51 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:56:53 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:56:55 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:56:58 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:57:01 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:01 :: Shipment BL - ComputeCharges :: Shipment count: 5
+2016/07/25 23:57:01 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:57:03 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:03 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:57:06 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:06 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:57:08 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:08 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:57:11 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:11 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:57:13 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:15 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:57:15 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:57:15 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:57:19 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:19 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:57:19 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:57:19 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:57:21 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:21 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:57:22 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:57:22 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:57:25 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:25 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:57:25 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:57:25 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:57:25 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:57:27 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:27 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:57:27 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:57:27 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:57:30 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:30 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:57:30 :: SOA BL - ComputeSoa - Done :: 
+2016/07/25 23:57:31 :: SOA BL - CreateSavePdfFile :: Successfull
+2016/07/25 23:57:33 :: SOA Controller - Details (Get) :: 
+2016/07/25 23:57:33 :: SOA BL - ComputeSoa :: 03039
+2016/07/25 23:57:41 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:57:43 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:46 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:57:48 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:52 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:57:56 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:57:56 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: e2027843-c4a7-4dd4-823e-196a125f9c5f
+2016/07/25 23:57:56 :: Shipment BL - GetUnpaidShipmentsByClientId :: 2d89bbfa-abfb-4693-9504-a4ab0f422057
+2016/07/25 23:58:03 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:58:06 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:07 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:58:09 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:10 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:58:13 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:15 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:58:20 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:21 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:58:25 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:25 :: Shipment BL - ComputeCharges :: Shipment count: 5
+2016/07/25 23:58:25 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:58:27 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:27 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:58:32 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:32 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:58:35 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:35 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:58:37 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:37 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:58:40 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:40 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2016/07/25 23:58:40 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:58:40 :: Shipment BL - ComputeCharges :: dd5b12d3-5485-4f09-b9e1-0ce352939c0f
+2016/07/25 23:58:44 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:44 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:58:45 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:58:45 :: Shipment BL - ComputeCharges :: 99efe317-5069-436c-9360-8470ee52ad7d
+2016/07/25 23:58:48 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:48 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:58:48 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:58:48 :: Shipment BL - ComputeCharges :: 8f510f2b-795c-44d1-8daf-305aa9d5813c
+2016/07/25 23:58:53 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:53 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:58:53 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2016/07/25 23:58:53 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:58:53 :: Shipment BL - ComputeCharges :: 9a7feeb3-6a6b-4c16-bd3e-c9e708a4446f
+2016/07/25 23:58:56 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:58:56 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:58:56 :: Shipment BL - ComputeBalances :: 
+2016/07/25 23:58:56 :: Shipment BL - ComputeCharges :: ac902cfc-11a5-4891-b014-ea50fa1fc9f4
+2016/07/25 23:59:00 :: Shipment BL - ComputeCharges - Done :: 
+2016/07/25 23:59:00 :: Shipment BL - ComputeBalances - SOA is not null :: 
+2016/07/25 23:59:00 :: SOA BL - ComputeSoa - Done :: 

@@ -1,0 +1,22 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.ApprovingAuthority>
+<br />
+<h4>Approving Authority</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridApprovingAuthority").Columns(columns =>
+   {
+       columns.Add(m => m.FirstName).Titled("First Name").Sortable(true).Filterable(true);
+       columns.Add(m => m.LastName).Titled("Last Name").Sortable(true).Filterable(true);
+       columns.Add(m => m.Company.CompanyName).Titled("Name").Sortable(true).Filterable(true).Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink(m.Company.CompanyName, "Details", "Company", new { id = m.CompanyId }, null));
+       columns.Add(m => m.ContactNo).Titled("Contact No").Sortable(true).Filterable(true);
+       columns.Add(m => m.Mobile).Titled("Mobile").Sortable(true).Filterable(true);
+       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink("Edit", "Edit", "ApprovingAuthority", new { id = m.ApprovingAuthorityId }, null));
+       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink("Delete", "Delete", "ApprovingAuthority", new { id = m.ApprovingAuthorityId }, null));
+   }).WithPaging(10)
+    }
+}
+<br />
+@Html.ActionLink("Add Approving Authority", "Add", null, new { @class = "btn btn-default" })

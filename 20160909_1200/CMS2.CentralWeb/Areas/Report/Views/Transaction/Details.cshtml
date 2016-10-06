@@ -1,0 +1,71 @@
+﻿@using GridMvc.Html
+@model CMS2.CentralWeb.Areas.Report.ViewModels.AcceptanceViewModel
+
+<br />
+<h4>Shipment Detais for AWB No @ViewBag.AWBNo</h4>
+<br />
+<form class="col-md-12 form-horizontal ">
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("AWB No", new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.Acceptance.awb, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Truck No", new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.Acceptance.TruckInfo.truckno, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            &nbsp;
+        </div>
+    </div>
+</form>
+
+@{
+    <div class="col-md-10 col-md-push-1">
+        <div class="grid-mvc" data-lang="en" data-gridname="gridGroup" data-selectable="true" data-multiplefilters="false" style="display: inline-block">
+            <div class="grid-wrap">
+                <table class="table tble-striped grid-table">
+                    <thead>
+                        <tr>
+                            <th class="grid-header">
+                                <div class="grid-header-title">
+                                    <span>Cargo</span>
+                                </div>
+                            </th>
+                            <th class="grid-header">
+                                <div class="grid-header-title">
+                                    <span>Received By</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Tracks != null)
+                        {
+                            foreach (var track in Model.Tracks)
+                            {
+                                <tr class="grid-row ">
+                                    <td class="grid-cell" data-name="cargo">@track.cargo</td>
+                                    <td class="grid-cell">@Model.Acceptance.acceptedbystring</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}

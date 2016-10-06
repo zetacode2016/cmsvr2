@@ -1,0 +1,477 @@
+﻿<br />
+<h4>TrackNTrace Maintenance</h4>
+
+<form class="col-md-12 form-horizontal" role="form">
+    <br />
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Branch Acceptance: ", new { @class = "control-label col-md-2", @style = "width:25%; padding-right: 5px" })
+                @Html.Label("Batch", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("BranchAcceptanceBatch", (SelectList)ViewBag.BranchAcceptanceBatch, new { @class = "form-control", @id = "BranchAcceptanceBatch" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Branch Acceptance','Batch');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('BranchAcceptanceBatch');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('BranchAcceptanceBatch');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Remarks", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("BranchAcceptanceRemarks", (SelectList)ViewBag.BranchAcceptanceRemarks, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Branch Acceptance', 'Remarks');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('BranchAcceptanceRemarks');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('BranchAcceptanceRemarks');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            @Html.Label("Gateway Transmittal: ", new {@class = "control-label col-md-2", @style = "width:25%; padding-right: 5px"})
+            @Html.Label("Batch", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("GatewayTransmittalBatch", (SelectList) ViewBag.GatewayTransmittalBatch, new {@class = "form-control", @id = "GatewayTransmittalBatch"})
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="Add('Gateway Transmittal', 'Batch');"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayTransmittalBatch');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayTransmittalBatch');"/>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Destination", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("GatewayTransmittalDestination", (SelectList)ViewBag.GatewayTransmittalDestination, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Gateway Transmittal', 'Destination');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayTransmittalDestination');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayTransmittalDestination');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Gateway", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("GatewayTransmittalGateway", (SelectList)ViewBag.GatewayTransmittalGateway, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Gateway Transmittal', 'Gateway');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayTransmittalGateway');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayTransmittalGateway');" />
+                </div>
+            </div>
+        </div>
+    </div>
+<br />
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Gateway Outbound: ", new { @class = "control-label col-md-2", @style = "width:25%; padding-right: 5px" })
+                @Html.Label("Batch", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("GatewayOutboundBatch", (SelectList)ViewBag.GatewayOutboundBatch, new { @class = "form-control", @id = "GatewayOutboundBatch" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Gateway Outbound', 'Batch');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayOutboundBatch');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayOutboundBatch');" />
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+            @Html.Label("Remarks", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("GatewayOutboundRemarks", (SelectList) ViewBag.GatewayOutboundRemarks, new {@class = "form-control"})
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="Add('Gateway Outbound', 'Remarks');"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayOutboundRemarks');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayOutboundRemarks');"/>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Gateway", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("GatewayOutboundGateway", (SelectList)ViewBag.GatewayOutboundGateway, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Gateway Outbound', 'Gateway');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayOutboundGateway');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayOutboundGateway');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            @Html.Label("Gateway Inbound: ", new {@class = "control-label col-md-2", @style = "width:25%; padding-right: 5px"})
+            @Html.Label("Flight No", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("GatewayInboundFlightNo", (SelectList) ViewBag.GatewayInboundFlightNo, new {@class = "form-control", @id = "GatewayInboundFlightNo"})
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="AddFlight();"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="EditFlight('GatewayInboundFlightNo');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="DeleteFlight('GatewayInboundFlightNo');"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+            @Html.Label("Remarks", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("GatewayInboundRemarks", (SelectList) ViewBag.GatewayInboundRemarks, new {@class = "form-control"})
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="Add('GatewayInbound', 'Remarks');"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayInboundRemarks');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayInboundRemarks');"/>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Origin", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("GatewayInboundOrigin", (SelectList)ViewBag.GatewayInboundOrigin, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('GatewayInbound', 'Origin');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('GatewayInboundOrigin');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('GatewayInboundOrigin');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Segregation: ", new { @class = "control-label col-md-2", @style = "width:25%; padding-right: 5px" })
+                @Html.Label("Batch", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("SegregationBatch", (SelectList)ViewBag.SegregationBatch, new { @class = "form-control", @id = "SegregationBatch" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Segregation', 'Batch');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('SegregationBatch');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('SegregationBatch');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Remarks", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("SegregationRemarks", (SelectList)ViewBag.SegregationRemarks, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Segregation', 'Remarks');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('SegregationRemarks');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('SegregationRemarks');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Distribution: ", new { @class = "control-label col-md-2", @style = "width:25%; padding-right: 5px" })
+                @Html.Label("Batch", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("DistributionBatch", (SelectList)ViewBag.DistributionBatch, new { @class = "form-control", @id = "DistributionBatch" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Distribution', 'Batch');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('DistributionBatch');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('DistributionBatch');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            @Html.Label("Cargo Transfer: ", new {@class = "control-label col-md-2", @style = "width:25%; padding-right: 5px"})
+            @Html.Label("Batch", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("CargoTransferBatch", (SelectList) ViewBag.CargoTransferBatch, new {@class = "form-control", @id = "CargoTransferBatch"})
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="Add('Cargo Transfer', 'Batch');"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="Edit('CargoTransferBatch');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="Delete('CargoTransferBatch');"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+            @Html.Label("Reason", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("CargoTransferReason", (SelectList) ViewBag.CargoTransferReason, new {@class = "form-control"})
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="Add('Cargo Transfer', 'Reason');"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="Edit('CargoTransferReason');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="Delete('CargoTransferReason');"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+            @Html.Label("Airline", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("CargoTransferAirline", (SelectList) ViewBag.CargoTransferAirline, new {@class = "form-control"})
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="Add('Cargo Transfer', 'Airline');"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="Edit('CargoTransferAirline');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="Delete('CargoTransferAirline');"/>
+            </div>
+        </div>
+    </div>
+</div>
+    @*<div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Branch", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("CargoTransferBranch", (SelectList)ViewBag.CargoTransferBranch, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Cargo Transfer', 'Branch');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('CargoTransferBranch');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('CargoTransferBranch');" />
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <br />
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Hold Cargo: ", new { @class = "control-label col-md-2", @style = "width:25%; padding-right: 5px" })
+                @Html.Label("Status", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("HoldCargoStatus", (SelectList)ViewBag.HoldCargoStatus, new { @class = "form-control", @id = "HoldCargoStatus" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Hold Cargo', 'Status');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('HoldCargoStatus');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('HoldCargoStatus');" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px"></div>
+                @Html.Label("Reason", new { @class = "control-label col-md-2", @style = "width:10%; padding-right: 5px" })
+                <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownList("HoldCargoReason", (SelectList)ViewBag.HoldCargoReason, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Add" onclick="Add('Hold Cargo', 'Reason');" />
+                </div>
+                <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Edit" onclick="Edit('HoldCargoReason');" />
+                </div>
+                <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                    <input type="button" class="btn btn-default" value="Delete" onclick="Delete('HoldCargoReason');" />
+                </div>
+            </div>
+        </div>
+    </div>
+<br/>
+<div class="row">
+    <div class="col-md-12 col-md-pull-1">
+        <div class="form-group">
+            @Html.Label("Bundling: ", new {@class = "control-label col-md-2", @style = "width:25%; padding-right: 5px"})
+            @Html.Label("Destination", new {@class = "control-label col-md-2", @style = "width:10%; padding-right: 5px"})
+            <div class="col-md-2" style="width: 30%; padding-left: 5px">
+                @Html.DropDownList("BundlingDestination", (SelectList) ViewBag.BundlingDestination, new {@class = "form-control", @id = "BundlingDestination" })
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Add" onclick="Add('Bundling', 'Destination');"/>
+            </div>
+            <div class="col-md-2" style="width: 7%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Edit" onclick="Edit('BundlingDestination');"/>
+            </div>
+            <div class="col-md-2" style="width: 10%; padding-left: 5px">
+                <input type="button" class="btn btn-default" value="Delete" onclick="Delete('BundlingDestination');"/>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 25%; padding-right: 5px">
+                @Html.ActionLink("Update TNT Database", "Update", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</form>
+@section scripts
+{
+    <script type="text/javascript">
+
+        function Add(module, field) {
+            window.location = '@Url.Action("Add", "TntMaint")' + '?mod=' + module + '&fld=' + field;
+        }
+
+        function Edit(controlId) {
+            window.location = '@Url.Action("Edit", "TntMaint")' + '?id=' + $('select[name="' + controlId + '"] option:selected').val();
+        }
+
+        function Delete(controlId) {
+            window.location = '@Url.Action("Delete", "TntMaint")' + '?id=' + $('select[name="' + controlId + '"] option:selected').val();
+        }
+
+        function AddFlight() {
+            window.location = '@Url.Action("Add", "FlightInfo")';
+        }
+
+        function EditFlight(controlId) {
+            window.location = '@Url.Action("Edit", "FlightInfo")' + '?id=' + $('select[name="' + controlId + '"] option:selected').val();
+        }
+
+        function DeleteFlight(controlId) {
+            window.location = '@Url.Action("Delete", "FlightInfo")' + '?id=' + $('select[name="' + controlId + '"] option:selected').val();
+        }
+
+    </script>
+}

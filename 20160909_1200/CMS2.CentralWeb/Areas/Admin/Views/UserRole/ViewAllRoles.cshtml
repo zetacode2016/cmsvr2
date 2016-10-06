@@ -1,0 +1,20 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Role>
+<br />
+<h4>Roles</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridGroup").Columns(columns =>
+        {
+            columns.Add(m => m.RoleName).Titled("Role").Sortable(true).Filterable(true);
+            columns.Add(m => m.Description).Titled("Description");
+            columns.Add(m => m.RecordStatus).Titled("Record Status").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="EditRole?id=@m.RoleId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="DeleteRole?id=@m.RoleId">Delete</a>);
+        }).WithPaging(10)
+    }
+}
+<br />
+@Html.ActionLink("Add Role", "AddRole", null, new { @class = "btn btn-default" })

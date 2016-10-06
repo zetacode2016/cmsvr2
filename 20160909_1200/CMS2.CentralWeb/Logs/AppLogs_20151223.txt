@@ -1,0 +1,6 @@
+2015/12/23 11:36:13 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/12/23 11:36:13 :: Shipment BL - ComputeCharges :: 6548b590-d624-40a8-952c-18fa263c6235
+2015/12/23 11:36:13 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/12/23 11:36:13 :: Shipment BL - ComputeCharges - Done :: 
+2015/12/23 20:32:08 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/12/23 21:06:13 :: Shipment BL - ComputeCharges :: Shipment count: 0

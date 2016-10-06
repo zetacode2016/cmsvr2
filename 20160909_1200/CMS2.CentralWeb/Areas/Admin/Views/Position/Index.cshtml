@@ -1,0 +1,18 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Position>
+<br/>
+<h4>Employee Position</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridPosition").Columns(columns =>
+        {
+            columns.Add(m => m.PositionName).Titled("Position").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="Position/Edit?id=@m.PositionId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="Position/Delete?id=@m.PositionId">Delete</a>);
+        }).WithPaging(10)
+    }
+}
+<br/>
+@Html.ActionLink("Add Position", "Add", null, new { @class = "btn btn-default" })

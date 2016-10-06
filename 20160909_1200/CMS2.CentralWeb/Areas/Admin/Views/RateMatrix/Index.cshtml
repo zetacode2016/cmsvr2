@@ -1,0 +1,449 @@
+﻿@model CMS2.CentralWeb.Areas.Admin.ViewModels.RateMatrixViewModel
+<br />
+<h4>Rate Matrix</h4>
+
+<form class="col-md-12 form-horizontal" rolw="form">
+    <input type="hidden" id="RateMatrixId"/>
+    <br/>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ApplicableRateId, new {@class = "control-label col-md-2", @style = "width:50%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.ApplicableRateId, (SelectList) ViewBag.ApplicableRates, "", new {@class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ApplyEvm, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.ApplyEvm, new { @disabled = "disabled" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.CommodityTypeId, new {@class = "control-label col-md-2", @style = "width:50%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.CommodityTypeName, new {@class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ApplyWeight, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.ApplyWeight, new { @disabled = "disabled" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ServiceTypeId, new {@class = "control-label col-md-2", @style = "width:50%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.ServiceTypeName, new {@class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasAwbFee, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasAwbFee, new {@disabled = "disabled"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ServiceModeId, new {@class = "control-label col-md-2", @style = "width:50%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.ServiceModeName, new {@class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasInsurance, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasInsurance, new {@disabled = "disabled"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.OriginCityId, new {@class = "control-label col-md-2", @style = "width:50%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.OriginCityId, (SelectList) ViewBag.OriginCities, "", new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasFuelCharge, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasFuelCharge, new {@disabled = "disabled"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.DestinationCityId, new {@class = "control-label col-md-2", @style = "width:50%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.DestinationCityId, (SelectList) ViewBag.DestinationCities, "", new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.IsVatable, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.IsVatable, new { @disabled = "disabled" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input id="create" type="button" class="btn btn-default" value="Create Combination" onclick="Create();" />
+                
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasValuationCharge, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasValuationCharge, new { @disabled = "disabled" })
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <input id="copycreate" type="button" class="btn btn-default" value="Copy ExpressRates" onclick="CopyCreate();"/>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            @Html.LabelFor(m => m.HasDeliveryFee, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+            <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                @Html.CheckBoxFor(m => m.HasDeliveryFee, new {@disabled = "disabled"})
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <input id="edit" type="button" class="btn btn-default" value="Edit Options" onclick="Edit();" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            @Html.LabelFor(m => m.HasPerishableFee, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+            <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                @Html.CheckBoxFor(m => m.HasPerishableFee, new {@disabled = "disabled"})
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasDangerousFee, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasDangerousFee, new { @disabled = "disabled" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12" style="width: 120%;">
+            <div id="ExpressRate" class="form-group">
+                <style>
+                    .gridheader {
+                        white-space: normal;
+                        text-align: center;
+                    }
+
+                    .gridheader-small {
+                        font-size: 11px;
+                    }
+                </style>
+
+                <div class="grid-mvc" data-lang="en" data-gridname="gridGroup" data-selectable="true" data-multiplefilters="false" style="display: inline-block;">
+                    <div class="grid-wrap">
+                        <table class="table tble-striped grid-table">
+                            <thead>
+                            <tr>
+                                <th class="grid-header" style="width: 130px;">
+                                    <div class="grid-header-title">
+                                        <div>Origin</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header" style="width: 130px;">
+                                    <div class="grid-header-title">
+                                        <div>Destination</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div class="gridheader">1 - 5</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div class="gridheader">6 - 49</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div class="gridheader">50  -249</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div class="gridheader">250 - 999</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div class="gridheader">1000 - 10,000</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div>&nbsp;</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div>&nbsp;</div>
+                                    </div>
+                                </th>
+                                <th class="grid-header">
+                                    <div class="grid-header-title">
+                                        <div>&nbsp;</div>
+                                    </div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody id="Rates">
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        function Create() {
+            window.location = 'RateMatrix/Create';
+        }
+
+        function CopyCreate() {
+            window.location = 'RateMatrix/CopyCreate';
+        }
+
+        $("#ApplicableRateId").change(function () {
+            var rid = $("#ApplicableRateId").val();
+            $.ajax({
+                type: 'get',
+                url: '@Url.Action("GetApplicableRate")',
+                dataType: 'json',
+                data: { rid: rid },
+                success: function(result) {
+                    $("#RateMatrixId").val(result.RateMatrixId);
+                    $("#ApplicableRateId").val(result.ApplicableRateId);
+                    $("#CommodityTypeName").val(result.CommodityTypeName);
+                    $("#ServiceTypeName").val(result.ServiceTypeName);
+                    $("#ServiceModeName").val(result.ServiceModeName);
+                    $("#ApplyEvm").prop("checked", result.ApplyEvm);
+                    $("#ApplyWeight").prop("checked", result.ApplyWeight);
+                    $("#HasAwbFee").prop("checked", result.HasAwbFee);
+                    $("#HasInsurance").prop("checked", result.HasInsurance);
+                    $("#HasFuelCharge").prop("checked", result.HasFuelCharge);
+                    $("#IsVatable").prop("checked", result.IsVatable);
+                    $("#HasValuationCharge").prop("checked", result.HasValuationCharge);
+                    $("#HasDeliveryFee").prop("checked", result.HasDeliveryFee);
+                    $("#HasPerishableFee").prop("checked", result.HasPerishableFee);
+                    $("#HasDangerousFee").prop("checked", result.HasDangerousFee);
+                    GetExpressRates($("#ApplicableRateId").val());
+                },
+                error: function(ex) {
+                }
+            });
+
+            return false;
+            });
+
+        function GetExpressRates(rid) {
+            var _rid = $("#ApplicableRateId").val();
+            if (!rid) {
+                _rid = rid;
+            }
+            $.ajax({
+                dataType: "html",
+                type: "get",
+                data: { rid: _rid },
+                url: '@Url.Action("GetExpressRate", "RateMatrix")',
+                success: function(result) {
+                    if (result.length > 0) {
+                        $("#Rates").html(result);
+                    } else {
+                        $("#Rates").load('@(Url.Action("NewExpressRate", "RateMatrix", null, Request.Url.Scheme))?rid=' + rid);
+                        GetCities();
+                    }
+                },
+                error: function(ex) {
+                }
+            });
+        }
+
+        function DeleteRow(mid, oid, did) {
+            if (confirm("Are you sure you want to delete?")) {
+                $.ajax({
+                    type: 'post',
+                    url: '@Url.Action("DeleteRow")',
+                    data: { matrixId: mid, originId: oid, destinationId: did },
+                    success: function(result) {
+                        if (result)
+                            GetExpressRates(null);
+                    },
+                    error: function(ex) {
+                    }
+                });
+            } else
+                event.preventDefault();
+        }
+
+        function AddRow(mid, oid, did) {
+            $.ajax({
+                type: 'Get',
+                url: '@Url.Action("AddRow")',
+                dataType: 'json',
+                data: { matrixId: mid, originId: oid, destinationId: did },
+                success: function(result) {
+                    $("#Rates").append('<tr class="grid-row" id="NewRate"><td class="grid-cell" data-name="Origin"><select class="form-control" data-val="true" data-val-required="Origin City is required." id="NewOriginCityId" name="NewOriginCityId"></select></td><td class="grid-cell" data-name="Destination"><select class="form-control" data-val="true" data-val-required="Destination City is required." id="NewDestinationCityId" name="NewDestinationCityId"></select></td></tr>');
+                    var index = 1;
+                    $.each(result, function(i, result) {
+                        $("#NewRate").append('<td class="grid-cell" data-name="Cost" ><input id="Cost' + index + '" name="Cost' + index + '" type="text" class="form-control" value="' + result + '" style="text-align: right;"></td>');
+                        index = index + 1;
+                    });
+                    $("#NewRate").append('<td class="grid-cell" data-name="Save"><input id="save" type="button" class="btn btn-default" value="Save" onclick="SaveNew();"></td><td class="grid-cell" data-name="Cancel"><input id="cancel" type="button" class="btn btn-default" value="Cancel" onclick="CancelNew();"></td>');
+                    GetCities();
+                },
+                error: function(ex) {
+                }
+            });
+            $("#RateMatrixId").val(mid);
+        }
+
+        function CancelNew() {
+            var row = document.getElementById("NewRate");
+            row.parentNode.removeChild(row);
+        }
+
+        function SaveNew() {
+            var rid = $("#ApplicableRateId").val();
+            var costs = new Array($('#Cost1').val(), $('#Cost2').val(), $('#Cost3').val(), $('#Cost4').val(), $('#Cost5').val());
+            var obj = {
+                RateMatrixId: $('#RateMatrixId').val(),
+                RateOriginCityId: $('#NewOriginCityId').val(),
+                RateDestinationCityId: $('#NewDestinationCityId').val(),
+                Costs: costs
+            };
+            $.ajax({
+                url: '@Url.Action("SaveNewRow")',
+                type: "post",
+                dataType: "json",
+                data: JSON.stringify(obj),
+                contentType: 'application/json; charset=utf-8'
+            });
+            GetExpressRates(rid);
+        }
+
+        function GetOriginCities(control) {
+            var mid = $('#RateMatrixId').val();
+            $.ajax({
+                type: 'get',
+                url: '@Url.Action("GetOriginCities")',
+                dataType: 'json',
+                data: { matrixId: mid },
+                success: function(result) {
+                    $.each(result, function(i, result) {
+                        $("#" + control).append('<option value="' + result.value + '">' + result.text + '</option>');
+                    });
+                },
+                error: function(ex) {
+                }
+            });
+            return false;
+        }
+
+        function GetDestinationCities(control) {
+            var mid = $('#RateMatrixId').val();
+            $.ajax({
+                type: 'get',
+                url: '@Url.Action("GetDestinationCities")',
+                dataType: 'json',
+                data: { matrixId: mid },
+                success: function(result) {
+                    $.each(result, function(i, result) {
+                        $("#" + control).append('<option value="' + result.value + '">' + result.text + '</option>');
+                    });
+                },
+                error: function(ex) {
+                }
+            });
+            return false;
+        }
+
+        function GetCities() {
+            $.ajax({
+                type: 'get',
+                url: '@Url.Action("GetCities", "City")',
+                dataType: 'json',
+                success: function(result) {
+                    $.each(result, function(i, result) {
+                        $("#NewOriginCityId").append('<option value="' + result.value + '">' + result.text + '</option>');
+                        $("#NewDestinationCityId").append('<option value="' + result.value + '">' + result.text + '</option>');
+                    });
+                },
+                error: function(ex) {
+                }
+            });
+            return false;
+        }
+
+        function Edit() {
+            var mid = $('#RateMatrixId').val();
+            window.location = 'RateMatrix/Edit?matrixId=' + mid;
+        }
+    </script>
+}

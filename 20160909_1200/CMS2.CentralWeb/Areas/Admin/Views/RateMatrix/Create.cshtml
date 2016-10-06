@@ -1,0 +1,182 @@
+﻿@model CMS2.Entities.RateMatrix
+<br />
+<h4>Rate Matrix - Add</h4>
+
+@using (Html.BeginForm("Create", "RateMatrix", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ApplicableRateId, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.ApplicableRateId, (SelectList)ViewBag.ApplicableRates, "", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ApplyEvm, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.ApplyEvm)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.CommodityTypeId, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.CommodityTypeId, (SelectList)ViewBag.CommodityTypes, "", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ApplyWeight, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.ApplyWeight)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ServiceTypeId, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.ServiceTypeId, (SelectList)ViewBag.ServiceTypes, "", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasAwbFee, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasAwbFee)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ServiceModeId, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.ServiceModeId, (SelectList)ViewBag.ServiceModes, "", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasInsurance, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasInsurance)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+               
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasFuelCharge, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasFuelCharge)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.IsVatable, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.IsVatable)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasValuationCharge, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasValuationCharge)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasDeliveryFee, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasDeliveryFee)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasPerishableFee, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasPerishableFee)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HasDangerousFee, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.CheckBoxFor(m => m.HasDangerousFee)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        &nbsp;
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="margin:0">
+            <input id="saveButton" type="submit" class="btn btn-default" value="Save" />
+            <input id="cancelButton" type="button" class="btn btn-default" value="Cancel" onclick="Cancel();" />
+        </div>
+    </div>
+}

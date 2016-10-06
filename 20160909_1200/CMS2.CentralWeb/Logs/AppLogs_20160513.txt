@@ -1,0 +1,22 @@
+2016/05/13 20:54:38 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/13 20:54:38 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges :: 47ce1f81-6280-41b0-9be3-0bab9e9b13f0
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges - Done :: 
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges :: 47ce1f81-6280-41b0-9be3-0bab9e9b13f0
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/13 20:54:47 :: Shipment BL - ComputeCharges - Done :: 
+2016/05/13 20:54:50 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/13 20:54:51 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/13 20:55:12 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/13 20:56:10 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/13 20:56:36 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/05/13 20:56:36 :: Shipment BL - ComputeCharges :: 47ce1f81-6280-41b0-9be3-0bab9e9b13f0
+2016/05/13 20:56:36 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/13 20:56:36 :: Shipment BL - ComputeCharges - Done :: 
+2016/05/13 20:56:44 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/05/13 20:56:44 :: Shipment BL - ComputeCharges :: 47ce1f81-6280-41b0-9be3-0bab9e9b13f0
+2016/05/13 20:56:44 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/13 20:56:44 :: Shipment BL - ComputeCharges - Done :: 

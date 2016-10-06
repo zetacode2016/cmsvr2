@@ -1,0 +1,57 @@
+2015/11/24 10:37:28 :: SOA Controller - Details (Get) :: 
+2015/11/24 10:37:28 :: SOA BL - ComputeSoa :: 00107
+2015/11/24 10:37:28 :: Shipment BL - GetUnpaidShipmentsByCompanyId :: 27f66996-3554-418d-8ae2-555dad1eb1cf
+2015/11/24 10:37:29 :: Shipment BL - GetUnpaidShipmentsByClientId :: 1da5e300-97eb-4be4-8b1f-23df4b6bb256
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: f1d96075-ab72-4876-8b6d-7bc1a31497e4
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBalances :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - SOA is null :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - Done :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: d32e15a5-09d6-469b-b85e-426de8218ef2
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBalances :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - SOA is null :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - Done :: 
+2015/11/24 10:37:29 :: Shipment BL - GetUnpaidShipmentsByClientId :: c4e3c7c0-eb10-4f9e-99dd-6e1d0f3f2edb
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2015/11/24 10:37:29 :: Shipment BL - GetUnpaidShipmentsByClientId :: 01e286b6-1bba-49c5-bd90-967f9eba4918
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: 402bff0d-c623-4d4d-945e-0ec939393115
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBalances :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - SOA is null :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - Done :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: 517ba2a1-1236-4faf-ac2b-2f79199dedad
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBalances :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - SOA is null :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - Done :: 
+2015/11/24 10:37:29 :: Shipment BL - GetUnpaidShipmentsByClientId :: 4cc8f461-237d-4cb5-887c-9b997d20bd93
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: c0f37bee-2cdb-41b8-8d56-641114a416e6
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBalances :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - SOA is null :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - Done :: 
+2015/11/24 10:37:29 :: Shipment BL - GetUnpaidShipmentsByClientId :: 7a299138-34ed-407d-89cb-b2c55cebd8a5
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: a2eee6f8-ed59-4078-ab9b-20446fc94c5f
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBalances :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - SOA is not null :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - Done :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges :: 1a6fce30-4e38-4eaf-a264-a7df0b6e8876
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - ComputeBalances :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - SOA is null :: 
+2015/11/24 10:37:29 :: Shipment BL - ComputeCharges - Done :: 
+2015/11/24 10:37:30 :: SOA BL - ComputeSoa - CurrentShipments :: 
+2015/11/24 10:37:30 :: SOA BL - ComputeSoa - PreviousShipments :: 
+2015/11/24 10:37:30 :: SOA BL - ComputeSoa - Done :: 
+2015/11/24 10:37:32 :: SOA Controller - ViewPrintable :: 

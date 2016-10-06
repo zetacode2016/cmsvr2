@@ -1,0 +1,14 @@
+2016/05/12 16:35:24 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2016/05/12 16:35:24 :: Shipment BL - ComputeCharges :: 04adcb0a-b635-4610-81f3-571c8377f3ab
+2016/05/12 16:35:24 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/12 16:35:24 :: Shipment BL - ComputeCharges - Done :: 
+2016/05/12 16:35:24 :: Shipment BL - ComputeCharges :: 6c623e04-ab4f-4ebe-94d1-65772a9a83eb
+2016/05/12 16:35:24 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/12 16:35:24 :: Shipment BL - ComputeCharges - Done :: 
+2016/05/12 16:35:25 :: Shipment BL - ComputeCharges :: Shipment count: 2
+2016/05/12 16:35:25 :: Shipment BL - ComputeCharges :: 04adcb0a-b635-4610-81f3-571c8377f3ab
+2016/05/12 16:35:25 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/12 16:35:25 :: Shipment BL - ComputeCharges - Done :: 
+2016/05/12 16:35:25 :: Shipment BL - ComputeCharges :: 6c623e04-ab4f-4ebe-94d1-65772a9a83eb
+2016/05/12 16:35:25 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/05/12 16:35:25 :: Shipment BL - ComputeCharges - Done :: 

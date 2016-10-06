@@ -1,0 +1,21 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.TerminalRevenueUnitMapping>
+<br />
+<h4>Terminal Revenue Unit Assignment</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridTerminalRevenueUnitMapping").Columns(columns =>
+   {
+   columns.Add(m => m.Terminal.TerminalCode).Titled("Plate No").Sortable(true).Filterable(true);
+   columns.Add(m => m.Terminal.TerminalName).Titled("Area").Sortable(true).Filterable(true);
+   columns.Add(m => m.RevenueUnit.RevenueUnitName).Titled("Area").Sortable(true).Filterable(true);
+   columns.Add(m => m.AssignedBy.FullName).Titled("Area").Sortable(true).Filterable(true);
+   columns.Add(m => m.DateAssignedString).Titled("Date Assigned").Sortable(true).Filterable(true);
+   columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="AssignTerminalRevenueUnit/Edit?id=@m. AssignTerminalRevenueUnitId">Edit</a>);
+        }).WithPaging(10)
+    }
+}
+<br />
+@Html.ActionLink("Add Terminal Revenue Unit Assignment", "Add", null, new { @class = "btn btn-default" })

@@ -1,0 +1,24 @@
+﻿@model List<CMS2.CentralWeb.Areas.Admin.ViewModels.ExpressRateViewModel>
+
+@{
+    if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            if (item != null)
+            {
+                <tr class="grid-row ">
+                    <td class="grid-cell" data-name="Origin">@item.RateOriginCity</td>
+                    <td class="grid-cell" data-name="Destination">@item.RateDestinationCity</td>
+                    @foreach (var cost in item.Costs)
+                    {
+                        <td class="grid-cell" data-name="Cost"style="text-align: right; padding-right: 40px;">@cost</td>
+                    }
+
+                    <td class="grid-cell" data-name="Add"><input id="add" type="button" class="btn btn-default" value="Add" onclick="AddRow('@item.RateMatrixId', '@item.RateOriginCityId', '@item.RateDestinationCityId');" /></td>
+                    <td class="grid-cell" data-name="Delete"><input id="delete" type="button" class="btn btn-default" value="Delete" onclick="DeleteRow('@item.RateMatrixId', '@item.RateOriginCityId', '@item.RateDestinationCityId');" /></td>
+                </tr>
+            }
+        }
+    }
+}

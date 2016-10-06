@@ -1,0 +1,22 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.User>
+<br />
+<h4>Users</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridUser").Columns(columns =>
+        {
+            columns.Add(m => m.UserName).Titled("Username").Sortable(true).Filterable(true);
+            columns.Add().Titled("Employee").Sortable(true).Filterable(true).Encoded(false).Sanitized(false).RenderValueAs(m => @<a href='@Url.Action("Details","Employee",new {id=@m.EmployeeId})'>Employeee</a>);
+            columns.Add(m => m.RecordStatusString).Titled("Account Status");
+            columns.Add(m => m.LastPasswordChangeString).Titled("Last Password Change");
+            columns.Add(m => m.LastLogInDateString).Titled("Last LogIn");
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="EditUser?id=@m.UserId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="DeleteUser?id=@m.UserId">Delete</a>);
+        }).WithPaging(10)
+    }
+}
+<br />
+@Html.ActionLink("Add User", "AddUser", null, new { @class = "btn btn-default" })

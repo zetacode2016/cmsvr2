@@ -1,0 +1,59 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.StatementOfAccountPayment>
+
+<h4>SOA - Payment History</h4>
+
+@if (Model != null)
+{
+    <br />
+    <form class="col-md-12 form-horizontal">
+        <div class="row">
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m => m[0].StatementOfAccount.Company.AccountNo, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.TextBoxFor(m => m[0].StatementOfAccount.Company.AccountNo, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m => m[0].StatementOfAccount.StatementOfAccountNo, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.TextBoxFor(m => m[0].StatementOfAccount.StatementOfAccountNo, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m => m[0].StatementOfAccount.Company.CompanyName, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.TextBoxFor(m => m[0].StatementOfAccount.Company.CompanyName, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m => m[0].StatementOfAccount.StatementOfAccountPeriod, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.TextBoxFor(m => m[0].StatementOfAccount.StatementOfAccountPeriod, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="form-group">
+        &nbsp;
+    </div>
+    @Html.Grid(Model).Named("gridShipment").Columns(columns =>
+        {
+            columns.Add(m => m.StatementOfAccount.StatementOfAccountNo).Titled("SOA No").Sortable(true).Filterable(true);
+            columns.Add(m => m.OrNo).Titled("OR No").Sortable(true).Filterable(true);
+            columns.Add(m => m.PaymentDateString).Titled("Date").Sortable(true).Filterable(true);
+            columns.Add(m => m.AmountString).Titled("Amount Paid").Sortable(true).Filterable(true);
+            columns.Add(m => m.PaymentType.PaymentTypeName).Titled("Payment Type").Sortable(true).Filterable(true);
+            columns.Add(m => m.ReceivedBy.FullName).Titled("Received By").Sortable(true).Filterable(true);
+        }).WithPaging(10)
+}

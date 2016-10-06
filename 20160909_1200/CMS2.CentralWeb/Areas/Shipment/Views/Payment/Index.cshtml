@@ -1,0 +1,22 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Payment>
+<br />
+<h4>Payments</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridPayments").Columns(columns =>
+   {
+   columns.Add(m => m.PaymentDateString).Titled("Payment Date").Sortable(true).Filterable(true);
+   columns.Add(m => m.OrNo).Titled("OR No").Sortable(true).Filterable(true);
+   columns.Add(m => m.PrNo).Titled("PR No").Sortable(true).Filterable(true);
+   columns.Add(m => m.Shipment.AirwayBillNo).Titled("AWB").Sortable(true).Filterable(true);
+   columns.Add(m => m.AmountString).Titled("Amount Paid");
+   columns.Add(m => m.PaymentType.PaymentTypeName).Titled("Payment Type").Sortable(true).Filterable(true);
+   columns.Add(m => m.ReceivedBy.FullName).Titled("Received By").Sortable(true).Filterable(true);
+   columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="Payment/Details?id=@m.PaymentId">Details</a>);
+        }).WithPaging(20)
+    }
+}
+<br />

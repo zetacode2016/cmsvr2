@@ -1,0 +1,20 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Models.ShipmentModel>
+
+<h4>Shipments</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridShipment").Columns(columns =>
+        {
+            columns.Add(m => m.AirwayBillNo).Titled("AWB No").Sortable(true).Filterable(true).Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="@Url.Action("Details", "Shipment",new{area="Admin", id=m.ShipmentId})">@m.AirwayBillNo</a>);
+            columns.Add(m => m.DateAcceptedString).Titled("Date").Sortable(true).Filterable(true);
+            columns.Add(m => m.OriginCity.CityName).Titled("Origin").Sortable(true).Filterable(true);
+            columns.Add(m => m.DestinationCity.CityName).Titled("Destination").Sortable(true).Filterable(true);
+            columns.Add(m => m.Shipper.FullName).Titled("Shipper").Sortable(true).Filterable(true);
+            columns.Add(m => m.Consignee.FullName).Titled("Consignee").Sortable(true).Filterable(true);
+            columns.Add(m => m.ShipmentTotalString).Titled("Total Amount").Sortable(true).Filterable(true);
+        }).WithPaging(10)
+    }
+}

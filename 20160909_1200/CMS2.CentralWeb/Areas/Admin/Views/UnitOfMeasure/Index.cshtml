@@ -1,0 +1,18 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.UnitOfMeasure>
+<br/>
+<h4>Unit Of Measure</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridUnitOfMeasure").Columns(columns =>
+   {
+       columns.Add(m => m.UnitOfMeasureName).Titled("Unit of Measure").Sortable(true).Filterable(true);
+            columns.Add(m => m.RecordStatusString).Titled("Record Status").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="UnitOfMeasure/InputForm?id=@m.UnitOfMeasureId">Edit</a>);
+        }).WithPaging(10)
+    }
+}
+<br/>
+@Html.ActionLink("Add Unit Of Measure", "InputForm", null, new { @class = "btn btn-default" })

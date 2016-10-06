@@ -1,0 +1,30 @@
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges :: Shipment count: 3
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges :: 3355aedc-3286-4e42-87f0-33e74e738b33
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges :: 9a8f777a-aecc-4dcd-a300-649256707686
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges :: 48f0b34c-eefa-461e-b07d-cb7ab3b97baa
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:04:57 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges :: Shipment count: 3
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges :: 3355aedc-3286-4e42-87f0-33e74e738b33
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges :: 9a8f777a-aecc-4dcd-a300-649256707686
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges :: 48f0b34c-eefa-461e-b07d-cb7ab3b97baa
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:34:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:37:36 :: Shipment BL - ComputeCharges :: Shipment count: 3
+2016/04/04 12:37:36 :: Shipment BL - ComputeCharges :: 3355aedc-3286-4e42-87f0-33e74e738b33
+2016/04/04 12:37:36 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:37:37 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:37:37 :: Shipment BL - ComputeCharges :: 9a8f777a-aecc-4dcd-a300-649256707686
+2016/04/04 12:37:37 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:37:37 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/04 12:37:37 :: Shipment BL - ComputeCharges :: 48f0b34c-eefa-461e-b07d-cb7ab3b97baa
+2016/04/04 12:37:37 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/04 12:37:37 :: Shipment BL - ComputeCharges - Done :: 

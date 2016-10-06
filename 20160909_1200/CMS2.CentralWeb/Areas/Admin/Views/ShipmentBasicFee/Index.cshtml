@@ -1,0 +1,21 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.ShipmentBasicFee>
+<br/>
+<h4>Shipment Basic Fee</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridShipment Basic Fee").Columns(columns =>
+        {
+            columns.Add(m => m.ShipmentFeeName).Titled("Shipment Fee Name").Sortable(true).Filterable(true);
+            columns.Add(m => m.AmountString).Titled("Amount").Sortable(true).Filterable(true);
+            columns.Add(m => m.Description).Titled("Description").Sortable(true).Filterable(true);
+            columns.Add(m => m.IsVatable).Titled("Is Vatable").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="ShipmentBasicFee/Edit?id=@m.ShipmentBasicFeeId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="ShipmentBasicFee/Delete?id=@m.ShipmentBasicFeeId">Delete</a>);
+        }).WithPaging(10)
+    }
+}
+<br/>
+@Html.ActionLink("Add Shipment Fee", "Add", null, new { @class = "btn btn-default" })

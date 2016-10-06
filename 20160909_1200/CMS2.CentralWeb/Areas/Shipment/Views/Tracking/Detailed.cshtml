@@ -1,0 +1,117 @@
+﻿@using GridMvc.Html
+@model CMS2.CentralWeb.Areas.Shipment.ViewModels.DetailedTrackingQueryViewModel
+<br />
+<h4>AirwayBill Detailed Tracking</h4>
+
+@using (Html.BeginForm("Detailed", "Tracking", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+        <div class="row">
+            <div class="col-md-12 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AirwayBillNo, new { @class = "control-label col-md-2", @style = "width:25%; padding-right: 5px" })
+                    <div class="col-md-5" style="width: 25%; padding-left: 5px">
+                        @Html.TextBoxFor(m => m.AirwayBillNo, new {@class = "form-control"})
+                    </div>
+                    <div class="col-md-5" style="width: 30%; padding-left: 5px">
+                        <input id="saveButton" type="submit" class="btn btn-default" value="Find" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    if (Model != null)
+    {
+        <div class="row">
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Shipper, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                        @Html.TextBoxFor(m => m.Shipper, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Origin, new { @class = "control-label col-md-2", @style = "width:30%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                        @Html.TextBoxFor(m => m.Origin, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-pull-1">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Consignee, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                            <div class="col-md-8" style="width: 50%; padding-left: 5px">
+                                @Html.TextBoxFor(m => m.Consignee, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-1">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Destination, new { @class = "control-label col-md-2", @style = "width:30%; padding-right: 5px" })
+                            <div class="col-md-8" style="width: 50%; padding-left: 5px">
+                                @Html.TextBoxFor(m => m.Destination, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-pull-1">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.PaymentMode, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                            <div class="col-md-8" style="width: 50%; padding-left: 5px">
+                                @Html.TextBoxFor(m => m.PaymentMode, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-1">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.ItemCount, new { @class = "control-label col-md-2", @style = "width:30%; padding-right: 5px" })
+                            <div class="col-md-8" style="width: 50%; padding-left: 5px">
+                                @Html.TextBoxFor(m => m.ItemCount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-pull-1">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Commodity, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                            <div class="col-md-8" style="width: 50%; padding-left: 5px">
+                                @Html.TextBoxFor(m => m.Commodity, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-1">
+                        <div class="form-group">
+
+                        </div>
+                    </div>
+                </div>
+    }
+        <div class="form-group">
+            <div class="col-md-12 col-md-push-2" style="margin:0">
+                @{
+                    if (Model != null)
+                    {
+                        if (Model.DetailedTrackingViewModels != null)
+                        {
+                            @Html.Grid(Model.DetailedTrackingViewModels).Named("gridTracking").Columns(columns =>
+                                    {
+                                        columns.Add(m => m.Weekday).Titled("Day");
+                                        columns.Add(m => m.Date).Titled("Date");
+                                        columns.Add(m => m.Time).Titled("Time");
+                                        columns.Add(m => m.Status).Titled("Status");
+                                        columns.Add(m => m.Location).Titled("Location");
+                                    })
+                        }
+                    }
+                }
+            </div>
+        </div>
+                    }

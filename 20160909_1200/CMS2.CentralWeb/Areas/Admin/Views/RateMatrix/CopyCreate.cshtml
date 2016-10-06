@@ -1,0 +1,51 @@
+﻿@model CMS2.CentralWeb.Areas.Admin.ViewModels.RateMatrixCopyCreateViewModel
+<br />
+<h4>Rate Matrix - Copy Create</h4>
+<h5>Copy matrix from existing Applicable Rate</h5>
+@using (Html.BeginForm("CopyCreate", "RateMatrix", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.FromApplicableRateId, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.FromApplicableRateId, (SelectList)ViewBag.FromApplicableRates, "", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+               
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ToApplicableRateId, new { @class = "control-label col-md-2", @style = "width:50%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 50%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.ToApplicableRateId, (SelectList)ViewBag.ToApplicableRates, "", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        &nbsp;
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="margin:0">
+            <input id="saveButton" type="submit" class="btn btn-default" value="Save" />
+            <input id="cancelButton" type="button" class="btn btn-default" value="Cancel" onclick="Cancel();" />
+        </div>
+    </div>
+}

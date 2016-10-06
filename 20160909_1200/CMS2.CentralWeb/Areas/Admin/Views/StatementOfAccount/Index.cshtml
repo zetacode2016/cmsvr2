@@ -1,0 +1,96 @@
+﻿<h4>SOA - @ViewBag.FunctionTitle</h4>
+
+<span style="color:red;">@ViewBag.Message</span>
+@{
+    string func = ViewBag.Function;
+    string title = ViewBag.FunctionTitle;
+}
+@using (Html.BeginForm("Index", "StatementOfAccount", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    @Html.Hidden("func", func)
+    @Html.Hidden("title", title)
+    <br />
+    if (func.Equals("Create"))
+    {
+        <div class="row">
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.Label("Account No", new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.TextBox("AccountNo", "", new { @class = "form-control", @id = "AccountNo", @onchange = "GetBillingPeriod();" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.Label("Billing Period", new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.DropDownList("SoaPeriod", (SelectList)ViewBag.Periods, new { @class = "form-control", @id = "SoaPeriod" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else if (func.Equals("History"))
+    {
+        <div class="row">
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.Label("Account No", new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.TextBox("AccountNo", "", new { @class = "form-control", @id = "AccountNo" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else if (func.Equals("Display") || func.Equals("Details") || func.Equals("Adjustment") || func.Equals("Payment") || func.Equals("PaymentHistory"))
+    {
+        <div class="row">
+            <div class="col-md-6 col-md-pull-1">
+                <div class="form-group">
+                    @Html.Label("SOA No", new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                        @Html.TextBox("SOANo", "", new { @class = "form-control", @id = "SOANo" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="row">
+        <div class="col-md-6 col-md-push-1">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10" style="margin: 0">
+                    <input id="submitButton" type="submit" class="btn btn-default" value="Submit" />
+                    <input id="cancelButton" type="button" class="btn btn-default" value="Cancel" onclick="CancelInputForm();" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section scripts
+{
+    <script type="text/javascript">
+
+        function GetBillingPeriod() {
+            var _accountNo = $("#AccountNo").val();
+            var billingPeriod = $("#SoaPeriod");
+            var url = "@Url.Content("~/StatementOfAccount/BillingPeriod")";
+
+            $.getJSON(url, { accountNo: _accountNo }, function (response) {
+                billingPeriod.empty();
+                $.each(response, function (index, item) {
+                    $(document.createElement('option'))
+                                    .text(item)
+                                    .appendTo(billingPeriod);
+                });
+            });
+        }
+
+    </script>
+}

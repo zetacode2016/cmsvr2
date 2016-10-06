@@ -1,0 +1,24 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.ExpressRate>
+<br />
+<h4>Express Rate</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridExpressRate").Columns(columns =>
+   {
+   columns.Add(m => m.CommodityType.CommodityTypeName).Titled("Commodity Type").Sortable(true).Filterable(true);
+   columns.Add(m => m.OriginCity.CityName).Titled("Origin City").Sortable(true).Filterable(true);
+   columns.Add(m => m.DestinationCity.CityName).Titled("Destination City").Sortable(true).Filterable(true);
+   columns.Add(m => m.MinimumWeightString).Titled("Minimum Weight").Sortable(true).Filterable(true);
+   columns.Add(m => m.MaximumWeightString).Titled("Maximum Weight").Sortable(true).Filterable(true);
+   columns.Add(m => m.RegularCostString).Titled("Reg Cost").Sortable(true).Filterable(true);
+   columns.Add(m => m.ExpressCostString).Titled("Exp Cost").Sortable(true).Filterable(true);
+   columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="ExpressRate/Edit?id=@m.ExpressRateId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="ExpressRate/Delete?id=@m.ExpressRateId">Delete</a>);
+        }).WithPaging(50)
+    }
+}
+<br/>
+@Html.ActionLink("Add Express Rate", "Add", null, new { @class = "btn btn-default" })

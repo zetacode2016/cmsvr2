@@ -1,0 +1,905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D541E688-3C36-4C95-BDE5-D074D1E701E6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS2.CentralWeb</RootNamespace>
+    <AssemblyName>CMS2.CentralWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GridMvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Grid.Mvc.3.1.0-ci1026\lib\net40\GridMvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\CMS2Backup\20160506_1114\CMS2.CentralWeb\bin\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc4, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc4.1.5.0.0\lib\net45\Unity.Mvc4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountStatusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminBaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ApplicableRateController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ApprovingAuthorityController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AreaController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AssignEmployeePositionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AssignTerminalRevenueUnitController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AssignTruckAreaController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AwbIssuancesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BillingPeriodController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BookingRemarkController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BookingStatusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BranchSatOfficeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BranchCorpOfficeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BusinessTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CityController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ClientController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ClusterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CommodityController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CommodityTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CompanyController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CratingController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DeliveryRemarkController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DeliveryStatusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FlightInfoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GatewaySatOfficeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GoodsDescriptionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GroupController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Controllers\IndustryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MaintenanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrganizationTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PackagingController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PositionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FuelSurchargeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PaymentModeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PaymentTermController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PaymentTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RateMatrixController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RegionController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Controllers\RevenueUnitTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ServiceModeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ServiceTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShipmentBasicFeeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShipModeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StatementOfAccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TerminalController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TntMaintController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TranShipmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TruckController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserRoleController.cs" />
+    <Compile Include="Areas\Admin\ViewModels\UserRoleViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\CityViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\EmployeePositionMappingViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\ExpressRateViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\FlightInfoViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\PaymentViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\RateMatrixCopyCreateViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\RateMatrixViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\StatementOfAccountPaymentViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\TranShipmentRouteViewModel.cs" />
+    <Compile Include="Areas\CmsApi\CmsApiAreaRegistration.cs" />
+    <Compile Include="Areas\Report\Controllers\BundleController.cs" />
+    <Compile Include="Areas\Report\Controllers\DistributionController.cs" />
+    <Compile Include="Areas\Report\Controllers\GatewayInboundController.cs" />
+    <Compile Include="Areas\Report\Controllers\GatewayTransmittalController.cs" />
+    <Compile Include="Areas\Report\Controllers\HoldController.cs" />
+    <Compile Include="Areas\Report\Controllers\PickupCargoController.cs" />
+    <Compile Include="Areas\Report\Controllers\ReportBaseController.cs" />
+    <Compile Include="Areas\Report\Controllers\ShipmentTransferController.cs" />
+    <Compile Include="Areas\Report\Controllers\TransferAcceptanceController.cs" />
+    <Compile Include="Areas\Report\ViewModels\BcoGatewayTransferSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BcoGatewayTransferViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BcoGatewayAcceptanceSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BcoGatewayAcceptanceViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\AreaBcoAcceptanceSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\AreaBcoAcceptanceViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BundleShipmentDiscrepancyViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BundleShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BundleSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BundleViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\DistributionShipmentQueryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\DistributionViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\DistributionSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\GatewayInboundShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\GatewayInboundSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\GatewayInboundViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\DistributionShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\GatewayTransmittalShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\GatewayTransmittalSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\GatewayTransmittalViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\HoldShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\HoldSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\PickupShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\ShipmentByDateBcoViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\ShipmentTransferShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BsoBcoTransferSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BsoBcoTransferViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\ShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\ReceivedAcceptanceShipmentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BsoBcoAcceptanceSummaryViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\BsoBcoAcceptanceViewModel.cs" />
+    <Compile Include="Areas\Shipment\Controllers\BookingController.cs" />
+    <Compile Include="Areas\Shipment\Controllers\DeliveryController.cs" />
+    <Compile Include="Areas\Shipment\Controllers\PaymentController.cs" />
+    <Compile Include="Areas\Shipment\Controllers\ShipmentBaseController.cs" />
+    <Compile Include="Areas\Shipment\Controllers\ShipmentController.cs" />
+    <Compile Include="Areas\Shipment\Controllers\TrackingController.cs" />
+    <Compile Include="Areas\Shipment\Controllers\TrackingEntryController.cs" />
+    <Compile Include="Areas\Shipment\ShipmentAreaRegistration.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\DeliveryDetailsViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\DeliveryViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\DetailedTrackingQueryViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\DetailedTrackingViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\PaymentViewModel.cs" />
+    <Compile Include="Areas\Report\ViewModels\PickupShipmentSummaryViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\TrackingEntryDetailsViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\TrackingEntryViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\TrackingQueryViewModel.cs" />
+    <Compile Include="Areas\Shipment\ViewModels\TrackingViewModel.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\ShipmentController.cs" />
+    <Compile Include="Areas\Report\Controllers\DeliveryController.cs" />
+    <Compile Include="Areas\Report\Controllers\ReportController.cs" />
+    <Compile Include="Areas\Report\Controllers\TransactionController.cs" />
+    <Compile Include="Areas\Report\ReportAreaRegistration.cs" />
+    <Compile Include="Areas\Report\ViewModels\AcceptanceViewModel.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\MultiButtonAttribute.cs" />
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CMS1\cargo.cs" />
+    <Compile Include="Models\CMS2_Acceptance.cs" />
+    <Compile Include="Models\CMS2_Area.cs" />
+    <Compile Include="Models\CMS2_Booking.cs" />
+    <Compile Include="Models\CMS2_Branch.cs" />
+    <Compile Include="Models\CMS2_Consignee.cs" />
+    <Compile Include="Models\CMS2_Deliver.cs" />
+    <Compile Include="Models\CMS2_Dimension.cs" />
+    <Compile Include="Models\CMS2_ErrorLogs.cs" />
+    <Compile Include="Models\CMS2_Franchise.cs" />
+    <Compile Include="Models\CMS2_Group.cs" />
+    <Compile Include="Models\CMS2_Payment.cs" />
+    <Compile Include="Models\CMS2_Shipper.cs" />
+    <Compile Include="Models\CMS2_Track.cs" />
+    <Compile Include="Models\CMS2_TruckInfo.cs" />
+    <Compile Include="Models\CMS1\destination.cs" />
+    <Compile Include="Models\CMS1\payment.cs" />
+    <Compile Include="Models\MobileTrackingContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ShipmentContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AwbPayment.cs" />
+    <Compile Include="ViewModels\Invoice.cs" />
+    <Compile Include="ViewModels\InvoiceSummary.cs" />
+    <Compile Include="ViewModels\Payments.cs" />
+    <Compile Include="ViewModels\PaymentsSummary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Group\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Edit.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Content\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-datepicker.min.css" />
+    <Content Include="Content\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\bootstrap-datepicker3.css" />
+    <Content Include="Content\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Gridmvc.css" />
+    <Content Include="Content\logo.png" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Truck\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ServiceMode\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Region\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\City\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Area\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentMode\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Position\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignEmployeePosition\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentTerm\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CommodityType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ShipmentBasicFee\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\LogIn.cshtml" />
+    <Content Include="Areas\Report\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Cluster\Index.cshtml" />
+    <Content Include="Areas\Report\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Report\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Report\Views\Report\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Areas\Admin\Views\Company\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Client\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\FuelSurcharge\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BusinessType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganizationType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountStatus\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BillingPeriod\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Client\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Client\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Print.cshtml" />
+    <Content Include="Areas\Admin\Views\Company\Details.cshtml" />
+    <Content Include="Grid.mvc.readme" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Display.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Shipments.cshtml" />
+    <Content Include="Areas\Admin\Views\ApprovingAuthority\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\History.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Payment.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\PaymentHistory.cshtml" />
+    <Content Include="Areas\Admin\Views\StatementOfAccount\Adjustment.cshtml" />
+    <Content Include="Areas\Report\Views\Transaction\Index.cshtml" />
+    <Content Include="Areas\Report\Views\Transaction\Details.cshtml" />
+    <Content Include="Areas\CmsApi\Views\web.config" />
+    <Content Include="Areas\Admin\Views\ApprovingAuthority\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\ViewAllRoles.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\AddRole.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\EditRole.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\ViewAllUsers.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\AddUser.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\UserDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\Edit.cshtml" />
+    <Content Include="Areas\Shipment\Views\web.config" />
+    <Content Include="Areas\Shipment\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Shipment\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Shipment\Views\Shipment\Add.cshtml" />
+    <Content Include="Areas\Shipment\Views\Shipment\Index.cshtml" />
+    <Content Include="Areas\Shipment\Views\Shipment\Details.cshtml" />
+    <Content Include="Areas\Shipment\Views\Booking\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Group\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Group\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Region\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Region\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Cluster\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Cluster\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\City\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\City\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Area\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Area\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Truck\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Truck\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Position\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Position\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountStatus\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountStatus\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountType\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BusinessType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\BusinessType\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganizationType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganizationType\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentMode\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentMode\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentTerm\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentTerm\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\PaymentType\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ServiceMode\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ServiceMode\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ShipmentBasicFee\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ShipmentBasicFee\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CommodityType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\CommodityType\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Company\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Company\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ApprovingAuthority\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ApprovingAuthority\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignEmployeePosition\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignEmployeePosition\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignEmployeePosition\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\BillingPeriod\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\BillingPeriod\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Client\Details.cshtml" />
+    <Content Include="Areas\Shipment\Views\Payment\Index.cshtml" />
+    <Content Include="Areas\Shipment\Views\Payment\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\BranchCorpOffice\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BranchCorpOffice\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\BranchCorpOffice\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BranchSatOffice\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\BranchSatOffice\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BranchSatOffice\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\GatewaySatOffice\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\GatewaySatOffice\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\GatewaySatOffice\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignTruckArea\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignTruckArea\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignTruckArea\Index.cshtml" />
+    <Content Include="Areas\Shipment\Views\Delivery\Details.cshtml" />
+    <Content Include="Areas\Shipment\Views\Delivery\Index.cshtml" />
+    <Content Include="Areas\Shipment\Views\TrackingEntry\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TntMaint\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TntMaint\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\TntMaint\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TntMaint\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\TntMaint\UpdateIndex.cshtml" />
+    <Content Include="Areas\Report\Views\PickupCargo\Index.cshtml" />
+    <Content Include="Areas\Report\Views\PickupCargo\_Shipments.cshtml" />
+    <Content Include="Areas\Report\Views\GatewayTransmittal\Index.cshtml" />
+    <Content Include="Areas\Report\Views\GatewayTransmittal\_Shipments.cshtml" />
+    <Content Include="Areas\Report\Views\GatewayInbound\_Shipments.cshtml" />
+    <Content Include="Areas\Report\Views\GatewayInbound\Index.cshtml" />
+    <Content Include="Areas\Report\Views\ShipmentTransfer\_Shipments.cshtml" />
+    <Content Include="Areas\Report\Views\ShipmentTransfer\BsoBco.cshtml" />
+    <Content Include="Areas\Report\Views\TransferAcceptance\_Shipments.cshtml" />
+    <Content Include="Areas\Report\Views\TransferAcceptance\BsoBcoAcceptance.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\EditUser.cshtml" />
+    <Content Include="Areas\Report\Views\ShipmentTransfer\BcoGateway.cshtml" />
+    <Content Include="Areas\Report\Views\TransferAcceptance\BcoGatewayAcceptance.cshtml" />
+    <Content Include="Areas\Report\Views\Distribution\Index.cshtml" />
+    <Content Include="Areas\Report\Views\Distribution\_Shipments.cshtml" />
+    <Content Include="Areas\Report\Views\TransferAcceptance\AreaBcoAcceptance.cshtml" />
+    <Content Include="Areas\Shipment\Views\Tracking\Index.cshtml" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.min.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.min.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.css.map" />
+    <Content Include="Content\bootstrap-datepicker.standalone.min.css.map" />
+    <Content Include="Content\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Content\bootstrap-datepicker.min.css.map" />
+    <Content Include="Content\bootstrap-datepicker.css.map" />
+    <Content Include="Areas\Report\Views\Hold\Index.cshtml" />
+    <Content Include="Areas\Report\Views\Bundle\Index.cshtml" />
+    <Content Include="Areas\Report\Views\Bundle\_Shipments.cshtml" />
+    <Content Include="Areas\Report\Views\Bundle\_Discrepancy.cshtml" />
+    <Content Include="Areas\Shipment\Views\Tracking\Detailed.cshtml" />
+    <Content Include="Areas\Admin\Views\Maintenance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\FlightInfo\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\FlightInfo\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Commodity\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Commodity\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ShipMode\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ShipMode\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ServiceType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ServiceType\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\GoodsDescription\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\GoodsDescription\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ApplicableRate\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ApplicableRate\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\RevenueUnitType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\RevenueUnitType\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BookingRemark\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\BookingStatus\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\BookingStatus\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BookingRemark\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DeliveryRemark\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\DeliveryStatus\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\DeliveryRemark\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DeliveryStatus\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Industry\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Industry\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\RateMatrix\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\RateMatrix\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\RateMatrix\CopyCreate.cshtml" />
+    <Content Include="Areas\Admin\Views\RateMatrix\_ExpressRate.cshtml" />
+    <Content Include="Areas\Admin\Views\Crating\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Crating\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Packaging\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Packaging\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TranShipment\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\TranShipment\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\RateMatrix\_NewExpressRate.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\UserRole.cshtml" />
+    <Content Include="Areas\Admin\Views\Terminal\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Terminal\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Terminal\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignTerminalRevenueUnit\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignTerminalRevenueUnit\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\AssignTerminalRevenueUnit\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\RateMatrix\Edit.cshtml" />
+    <None Include="Properties\PublishProfiles\CMS2CentralWeb.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\gridmvc.js" />
+    <Content Include="Scripts\gridmvc.lang.fr.js" />
+    <Content Include="Scripts\gridmvc.lang.ru.js" />
+    <Content Include="Scripts\gridmvc.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-2.1.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Views\Home\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_GridPager.cshtml" />
+    <Content Include="Views\Shared\_Grid.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\AdminBase\" />
+    <Folder Include="Areas\Admin\Views\AwbIssuances\" />
+    <Folder Include="Areas\Admin\Views\Payment\" />
+    <Folder Include="Areas\CmsApi\Controllers\" />
+    <Folder Include="Areas\CmsApi\Models\" />
+    <Folder Include="Areas\CmsApi\Views\Shared\" />
+    <Folder Include="Areas\Report\Models\" />
+    <Folder Include="Areas\Report\Views\Delivery\" />
+    <Folder Include="Areas\Shipment\Models\" />
+    <Folder Include="Downloads\cmsclient\" />
+    <Folder Include="Logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMS2.BusinessLogic\CMS2.BusinessLogic.csproj">
+      <Project>{b28f8fec-45b4-465e-8438-727c1c2294d0}</Project>
+      <Name>CMS2.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS2.Common\CMS2.Common.csproj">
+      <Project>{40dd132a-44bb-4054-80a2-0a0a848cbda1}</Project>
+      <Name>CMS2.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS2.DataAccess\CMS2.DataAccess.csproj">
+      <Project>{30451916-c807-4426-9ceb-31cbb2736f88}</Project>
+      <Name>CMS2.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS2.Entities\CMS2.Entities.csproj">
+      <Project>{b446c38f-ea3b-4311-93c1-0a3c813229b5}</Project>
+      <Name>CMS2.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2429</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2429/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

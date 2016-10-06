@@ -1,0 +1,23 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Booking>
+<br />
+<h4>Bookings</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridBookings").Columns(columns =>
+        {
+            columns.Add(m => m.DateBookedString).Titled("Date Booked").Sortable(true).Filterable(true);
+            columns.Add(m => m.BookingNo).Titled("Booking No").Sortable(true).Filterable(true);
+            columns.Add(m => m.Shipper.FullName).Titled("Shipper").Sortable(true).Filterable(true);
+            columns.Add(m => m.OriginCity.CityName).Titled("Origin City").Sortable(true).Filterable(true);
+            columns.Add(m => m.Consignee.FullName).Titled("Consignee").Sortable(true).Filterable(true);
+            columns.Add(m => m.DestinationCity.CityName).Titled("Destination City").Sortable(true).Filterable(true);
+            columns.Add(m => m.BookingStatus.BookingStatusName).Titled("Status").Sortable(true).Filterable(true);
+            columns.Add(m => m.AssignedToArea.RevenueUnitName).Titled("Assigned To").Sortable(true).Filterable(true);
+            columns.Add(m => m.BookedBy.FullName).Titled("Booked By").Sortable(true).Filterable(true);
+        }).WithPaging(20)
+    }
+}
+<br />

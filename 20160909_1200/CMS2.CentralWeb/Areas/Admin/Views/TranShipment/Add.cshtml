@@ -1,0 +1,164 @@
+﻿@model CMS2.CentralWeb.Areas.Admin.ViewModels.TranShipmentRouteViewModel
+
+<br />
+<h4>TransShipment Route - Add</h4>
+
+@using (Html.BeginForm("Add", "TranShipment", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br/>
+    <div class="row">
+        <div class="col-md-8 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TransShipmentRouteName, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.TransShipmentRouteName, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.OriginCityId, new {@class = "control-label col-md-2", @style = "width:40%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.OriginCityId, (SelectList) ViewBag.OriginCities, new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Legs">
+        <div class="row">
+            <div class="col-md-8 col-md-pull-1">
+                <div class="form-group">
+                    @Html.LabelFor(m=>m.LegId, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                    <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                        @Html.DropDownListFor(x=>x.LegId, (SelectList)ViewBag.LegCities, new {@class = "form-control"})
+                    </div>
+                    @*<div class="col-md-4" style="width: 30%; padding-left: 5px">
+                        <input id="add" type="button" class="btn btn-default" value="Add" />
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.DestinationCityId, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.DestinationCityId, (SelectList)ViewBag.DestinationCities, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        &nbsp;
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="margin:0">
+            <input id="saveButton" type="submit" class="btn btn-default" value="Save" />
+            <input id="cancelButton" type="button" class="btn btn-default" value="Cancel" onclick="Cancel();" />
+        </div>
+    </div>
+}
+@section scripts
+{
+    <script type="text/javascript">
+
+        //function Create() {
+        //    window.location = 'RateMatrix/Create';
+        //}
+
+        //function CopyCreate() {
+        //    window.location = 'RateMatrix/CopyCreate';
+        //}
+
+        @*$("#ApplicableRateId").on("click", function () {
+            $('#CommodityTypeId').empty();
+            var rid = $("#ApplicableRateId").val();
+            $.ajax({
+                type: 'get',
+                url: '@Url.Action("GetCommodityTypes")',
+                dataType: 'json',
+                data: { rid: rid },
+                success: function (result) {
+                    $.each(result, function (i, result) {
+                        $("#CommodityTypeId").append('<option value="' + result.value + '">' + result.text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                }
+            });
+            return false;
+        });*@
+
+       
+
+        @*function DeleteRow(mid, oid, did) {
+            if (confirm("Are you sure you want to delete?")) {
+                $.ajax({
+                    type: 'post',
+                    url: '@Url.Action("DeleteRow")',
+                    data: { matrixId: mid, originId: oid, destinationId: did },
+                    success: function(result) {
+                        if (result)
+                            GetExpressRates();
+                    },
+                    error: function(ex) {
+                    }
+                });
+            } else
+                event.preventDefault();
+        }*@
+
+        @*function AddRow(mid, oid, did) {
+            $.ajax({
+                type: 'Get',
+                url: '@Url.Action("AddRow")',
+                dataType: 'json',
+                data: { matrixId: mid, originId: oid, destinationId: did },
+                success: function (result) {
+                    $("#Rates").append('<tr class="grid-row" id="NewRate"><td class="grid-cell" data-name="Origin"><select class="form-control" data-val="true" data-val-required="Origin City is required." id="NewOriginCityId" name="NewOriginCityId"></select></td><td class="grid-cell" data-name="Destination"><select class="form-control" data-val="true" data-val-required="Destination City is required." id="NewDestinationCityId" name="NewDestinationCityId"></select></td></tr>');
+                   var index = 1;
+                    $.each(result, function (i, result) {
+                        $("#NewRate").append('<td class="grid-cell" data-name="Cost" colspan="2"><input id="Cost' + index + '" name="Cost' + index + '" type="text" class="form-control" value="' + result + '" style="text-align: right;"></td>');
+                        index = index + 1;
+                    });
+                    $("#NewRate").append('<td class="grid-cell" data-name="Save"><input id="save" type="button" class="btn btn-default" value="Save" onclick="SaveNew();"></td><td class="grid-cell" data-name="Cancel"><input id="cancel" type="button" class="btn btn-default" value="Cancel" onclick="CancelNew();"></td>');
+                    GetCities("NewOriginCityId");
+                    GetCities("NewDestinationCityId");
+                },
+                error: function (ex) {
+                }
+            });
+        }
+
+        function CancelNew() {
+            var row = document.getElementById("NewRate");
+            row.parentNode.removeChild(row);
+        }
+
+        function SaveNew() {
+        }*@
+
+        @*function GetCities(control){
+            $.ajax({
+                type: 'get',
+                url: '@Url.Action("GetCities","City")',
+                dataType: 'json',
+                success: function (result) {
+                    $.each(result, function (i, result) {
+                        $("#"+control).append('<option value="' + result.value + '">' + result.text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                }
+            });
+            return false;
+        }*@
+
+    </script>
+}

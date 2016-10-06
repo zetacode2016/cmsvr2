@@ -1,0 +1,29 @@
+﻿@using GridMvc.Html
+@model List<CMS2.CentralWeb.Models.CMS2_Acceptance>
+
+<br/>
+<h4>Acceptance</h4>
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridAcceptance").Columns(columns =>
+        {
+            columns.Add(m => m.awb).Titled("AWB No").Sortable(true).Filterable(true).Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="@Url.Action("Details", "Transaction",new{area="Report", awbNo=m.awb})">@m.awb</a>);
+            columns.Add(m => m.dateacceptedstring).Titled("Date Accepted").Sortable(true).Filterable(true);
+            columns.Add(m => m.accountno).Titled("Account No").Sortable(true).Filterable(true);
+            columns.Add(m => m.shipper).Titled("Shipper").Sortable(true).Filterable(true);
+            columns.Add(m => m.city1).Titled("Origin City").Sortable(true).Filterable(true);
+            columns.Add(m => m.consignee).Titled("Consignee").Sortable(true).Filterable(true);
+            columns.Add(m => m.city2).Titled("Destination City").Sortable(true).Filterable(true);
+            columns.Add(m => m.Quantity).Titled("Qty");
+            columns.Add(m => m.chargablewt).Titled("Chargeable Wt");
+            columns.Add(m => m.subtotalstring).Titled("Sub-Total");
+            columns.Add(m => m.vatamountstring).Titled("Vat Amount");
+            columns.Add(m => m.grantotalstring).Titled("Total");
+            columns.Add(m => m.servicemode).Titled("Service Mode").Sortable(true).Filterable(true);
+            columns.Add(m => m.paymode).Titled("Pay Mode").Sortable(true).Filterable(true);
+            columns.Add(m => m.acceptedbystring).Titled("Accepted By").Sortable(true).Filterable(true);
+        }).WithPaging(20)
+
+    }
+}

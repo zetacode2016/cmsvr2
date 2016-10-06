@@ -1,0 +1,40 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Client>
+<br />
+<h4>@ViewBag.Header</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridClient").Columns(columns =>
+        {
+
+            columns.Add(m => m.FullName).Titled("Name").Sortable(true).Filterable(true);
+            columns.Add(m => m.AccountNo).Titled("Account No").Sortable(true).Filterable(true);
+            columns.Add(m=>m.CompanyName).Titled("Company").Sortable(true).Filterable(true).RenderValueAs(m => m.Company == null ? m.CompanyName : m.Company.CompanyName);
+            columns.Add(m => m.City.CityName).Titled("City").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink("Edit", "Edit", "Client", new
+            {
+                id = m.ClientId
+            }, null));
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Html.ActionLink("Delete", "Delete", "Client", new
+            {
+                id = m.ClientId
+            }, null));
+        }).WithPaging(30)
+    }
+}
+<br/>
+@{
+    string header = ViewBag.Header;
+    if (header.Contains("Customers"))
+    {
+
+    }
+    else
+    {
+        string buttonTitle = "Add " + ViewBag.Header;
+        @Html.ActionLink(buttonTitle, "Add", null, new { @class = "btn btn-default" })
+    }    
+}
+

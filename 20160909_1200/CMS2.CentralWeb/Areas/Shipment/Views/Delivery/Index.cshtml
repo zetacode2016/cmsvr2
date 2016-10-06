@@ -1,0 +1,19 @@
+﻿@using GridMvc.Html
+@model List<CMS2.CentralWeb.Areas.Shipment.ViewModels.DeliveryViewModel>
+<br />
+<h4>Deliveries</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridDelivery").Columns(columns =>
+        {
+            columns.Add(m => m.AirwayBillNo).Titled("AirwayBill No").Sortable(true).Filterable(true);
+            columns.Add(m => m.DateDelivered).Titled("Date Delivered").Sortable(true).Filterable(true).Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="Delivery/Details?id=@m.DeliveryId">@m.DateDelivered</a>).Css("gridheader");
+            columns.Add(m => m.DeliveredBy).Titled("Delivered By").Sortable(true).Filterable(true);
+            columns.Add(m => m.DeliveryStatus).Titled("Delviery Status").Sortable(true).Filterable(true);
+           
+        }).WithPaging(20)
+    }
+}
+<br />

@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    @RenderBody()
+</div>
+@RenderSection("scripts", required: false)
+@section scripts
+{
+    <script type="text/javascript">
+
+        function Cancel() {
+            window.location = '@Url.Action("Index","Maintenance")';
+        }
+
+
+        function CancelInputForm() {
+            window.location = '@Url.Action("Index","TntMaint")';
+        }
+
+        function CancelModule(module) {
+            window.location = '' + module + '/Index';
+        }
+
+    </script>
+}

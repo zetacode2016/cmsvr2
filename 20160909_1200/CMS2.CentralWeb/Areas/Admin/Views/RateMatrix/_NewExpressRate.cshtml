@@ -1,0 +1,27 @@
+﻿@model CMS2.CentralWeb.Areas.Admin.ViewModels.ExpressRateViewModel
+
+@using (Html.BeginForm("SaveNewRow", "RateMatrix", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role="form", id="NewExpressRate" }))
+{
+ 
+    if (Model != null)
+    {
+
+        <tr class="grid-row" id="NewRate">
+            <td class="grid-cell" data-name="Origin">
+                <select class="form-control" data-val="true" data-val-required="Origin City is required." id="NewOriginCityId" name="NewOriginCityId"></select>
+            </td>
+            <td class="grid-cell" data-name="Destination">
+                <select class="form-control" data-val="true" data-val-required="Destination City is required." id="NewDestinationCityId" name="NewDestinationCityId"></select>
+            </td>
+            <td class="grid-cell" data-name="Cost"><input id="Cost1" name="Cost1" type="text" class="form-control" value="0" style="text-align: right;"></td>
+            <td class="grid-cell" data-name="Cost"><input id="Cost2" name="Cost2" type="text" class="form-control" value="0" style="text-align: right;"></td>
+            <td class="grid-cell" data-name="Cost"><input id="Cost3" name="Cost3" type="text" class="form-control" value="0" style="text-align: right;"></td>
+            <td class="grid-cell" data-name="Cost"><input id="Cost4" name="Cost4" type="text" class="form-control" value="0" style="text-align: right;"></td>
+            <td class="grid-cell" data-name="Cost"><input id="Cost5" name="Cost5" type="text" class="form-control" value="0" style="text-align: right;"></td>
+
+            <td class="grid-cell" data-name="Save"><input id="save" type="button" class="btn btn-default" value="Save" onclick="SaveNew();"></td>
+            <td class="grid-cell" data-name="Cancel"><input id="cancel" type="button" class="btn btn-default" value="Cancel" onclick="CancelNew();"></td>
+        </tr>
+    }
+
+}

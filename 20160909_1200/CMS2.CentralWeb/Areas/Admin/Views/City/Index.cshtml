@@ -1,0 +1,20 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.City>
+<br />
+<h4>City</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridCity").Columns(columns =>
+            {
+                columns.Add(m => m.CityName).Titled("City").Sortable(true).Filterable(true);
+                columns.Add(m => m.CityCode).Titled("Code").Sortable(true).Filterable(true);
+                columns.Add(m => m.BranchCorpOffice.BranchCorpOfficeName).Titled("BCO").Sortable(true).Filterable(true);
+                columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="City/Edit?id=@m.CityId">Edit</a>);
+                columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="City/Delete?id=@m.CityId">Delete</a>);
+            }).WithPaging(20)
+    }
+}
+<br/>
+@Html.ActionLink("Add City", "Add", null, new { @class = "btn btn-default" })

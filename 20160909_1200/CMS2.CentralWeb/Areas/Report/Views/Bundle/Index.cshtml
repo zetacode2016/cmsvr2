@@ -1,0 +1,102 @@
+﻿@using GridMvc.Html
+@model CMS2.CentralWeb.Areas.Report.ViewModels.BundleSummaryViewModel
+<br />
+<h4>Bundle / UnBundle</h4>
+
+@using (Html.BeginForm("Index", "Bundle", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TransactionType, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.DropDownListFor(x => x.TransactionType, (SelectList)ViewBag.Types, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.TransactionDate, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.TransactionDate, new { @class = "form-control datecontrol" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(x => x.BranchCorpOfficeId, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%; padding-left: 5px">
+                    @Html.DropDownListFor(x => x.BranchCorpOfficeId, (SelectList)ViewBag.Bcos, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 20%; padding-right: 5px">&nbsp;</div>
+                <div class="col-md-3" style="width: 30%; padding-left: 5px">
+                    <input id="saveButton" type="submit" class="btn btn-default" value="Find" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-12 col-md-push-1" style="margin:0">
+            @{
+                if (Model != null)
+                {
+                    if (Model.BundleViewModels != null)
+                    {
+                        @Html.Grid(Model.BundleViewModels).Named("gridBundle").Columns(columns =>
+                   {
+                       columns.Add(m => m.BundleNo).Titled("Sack No").Sortable(true).Filterable(true);
+                       columns.Add(m => m.AwbCount).Titled("AWB Count").Sortable(true).Filterable(true);
+                       if (Model.TransactionType.Equals("Bundle"))
+                           columns.Add(m => m.OriginDestination).Titled("Destination").Sortable(true).Filterable(true);
+                       else if (Model.TransactionType.Equals("UnBundle"))
+                           columns.Add(m => m.OriginDestination).Titled("Origin").Sortable(true).Filterable(true);
+                       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Ajax.ActionLink("View Shipments", "Shipments", new { bundleDate = m.TransactionDate, sackNo = m.BundleNo, username = m.Username, destination = m.OriginDestination, bundletype = m.TransactionType}, new AjaxOptions { UpdateTargetId = "Shipments" }));
+                   }).WithPaging(30)
+                    }
+                }
+            }
+        </div>
+    </div>
+    <div id="Shipments" class="form-group">
+    </div>
+                }
+@section scripts{
+
+    <script>
+
+        $(function () {
+            $('.datecontrol').datepicker({ dateformat: "MM/dd/yyyy" });
+        });
+
+    </script>
+}

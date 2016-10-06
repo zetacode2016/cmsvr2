@@ -1,0 +1,5 @@
+2016/07/28 11:00:29 :: Shipment BL - ComputeBalances - SOA is not null :: Sequence contains no elements
+2016/07/28 11:00:30 :: Shipment BL - ComputeBalances - SOA is not null :: Sequence contains no elements
+2016/07/28 11:00:41 :: Shipment BL - ComputeBalances - SOA is not null :: Sequence contains no elements
+2016/07/28 11:00:44 :: Shipment BL - ComputeBalances - SOA is not null :: Sequence contains no elements
+2016/07/28 11:05:22 :: Shipment BL - ComputeBalances - SOA is not null :: Sequence contains no elements

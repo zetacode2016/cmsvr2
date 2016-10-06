@@ -1,0 +1,217 @@
+﻿@model CMS2.Entities.Models.StatementOfAccountModel
+
+<br/>
+<h4>SOA - Adjustment</h4>
+
+<form class="col-md-12 form-horizontal">
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Company.AccountNo, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                    @Html.TextBoxFor(m => m.Company.AccountNo, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.StatementOfAccountNo, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                    @Html.TextBoxFor(m => m.StatementOfAccountNo, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Company.CompanyName, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                    @Html.TextBoxFor(m => m.Company.CompanyName, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.StatementOfAccountPeriod, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                    @Html.TextBoxFor(m => m.StatementOfAccountPeriod, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="form-group">
+    &nbsp;
+</div>
+
+@using (Html.BeginForm("Adjustment", "StatementOfAccount", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    @Html.HiddenFor(x=>x.StatementOfAccountId)
+    @Html.HiddenFor(x => x.SoaDueDate)
+    
+    <h4>Current Charges</h4>
+    <div class="grid-mvc" data-lang="en" data-gridname="gridGroup" data-selectable="true" data-multiplefilters="false" style="display: inline-block">
+        <div class="grid-wrap">
+            <table class="table tble-striped grid-table">
+                <thead>
+                    <tr>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Date</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>AWB No</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Freight Charges</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>VAT</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Total Amount</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Payments</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Adjustment</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Balance</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Payment Date</span>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    @{
+    if (Model.CurrentShipments!=null)
+                        {
+                            foreach (var shipment in Model.CurrentShipments)
+                            {
+                                <tr class="grid-row ">
+                                    <td class="grid-cell" data-name="DateAccepted">@shipment.DateAcceptedString</td>
+                                    <td class="grid-cell" data-name="AirwayBillNo">@shipment.AirwayBillNo</td>
+                                    <td class="grid-cell" data-name="SubTotal">@shipment.ShipmentSubTotalString</td>
+                                    <td class="grid-cell" data-name="EvatAmount">@shipment.ShipmentVatAmountString</td>
+                                    <td class="grid-cell" data-name="TotalAmount">@shipment.ShipmentTotalString</td>
+                                    <td class="grid-cell" data-name="TotalPayments">@shipment.TotalPaymentsString</td>
+                                    <td class="grid-cell" data-name="Adjustment" style="text-align: right; width: 120px; padding-right: 30px;"><input id="Adjustment_@(shipment.ShipmentId)" name="Adjustment_@(shipment.ShipmentId)" type="text" class="form-control" value="@shipment.AdjustmentString" style="width: 100px; text-align: right;" /></td>
+                                    <td class="grid-cell" data-name="CurrentBalance">@shipment.CurrentBalanceString</td>
+                                    <td class="grid-cell" data-name="PaymentDate">@shipment.LastPaymentDateString</td>
+                                </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+    <h4>Balance From Previous Bill</h4>
+    <div class="grid-mvc" data-lang="en" data-gridname="gridGroup" data-selectable="true" data-multiplefilters="false" style="display: inline-block">
+        <div class="grid-wrap">
+            <table class="table tble-striped grid-table">
+                <thead>
+                    <tr>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>SOA Date</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>SOA No</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>AWB No</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Amount Due</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Surcharge</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Payments</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Adjustment</span>
+                            </div>
+                        </th>
+                        <th class="grid-header">
+                            <div class="grid-header-title">
+                                <span>Balance</span>
+                            </div>
+                        </th>
+                    <tr>
+                </thead>
+                <tbody>
+                    @{
+                        if (Model.PreviousShipments!=null)
+                        {
+                            foreach (var unpaid in Model.PreviousShipments.Distinct())
+                            {
+                                <tr class="grid-row ">
+                                    <td class="grid-cell" data-name="StatementOfAccountDate">@unpaid.StatementOfAccount.StatementOfAccountDateString</td>
+                                    <td class="grid-cell" data-name="StatementOfAccountNo">@unpaid.StatementOfAccount.StatementOfAccountNo</td>
+                                    <td class="grid-cell" data-name="AirwayBillNo">@unpaid.AirwayBillNo</td>
+                                    <td class="grid-cell" data-name="PreviousBalance">@unpaid.PreviousBalanceString</td>
+                                    <td class="grid-cell" data-name="Surcharge">@unpaid.SurchargeString</td>
+                                    <td class="grid-cell" data-name="TotalPayments">@unpaid.TotalPaymentsString</td>
+                                    <td class="grid-cell" data-name="Adjustment" style="text-align: right; width: 120px; padding-right: 30px;"><input id="Adjustment_@(unpaid.ShipmentId)" name="Adjustment_@(unpaid.ShipmentId)" type="text" class="form-control" value="@unpaid.AdjustmentString" style="width: 100px; text-align: right;" /></td>
+                                    <td class="grid-cell" data-name="CurrentBalance">@unpaid.CurrentBalanceString</td>
+                                </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="margin: 0">
+            <input id="saveButton" type="submit" class="btn btn-default" value="Save Adjustments" />
+            <input id="cancelButton" type="button" class="btn btn-default" value="Cancel" onclick="CancelInputForm();" />
+        </div>
+    </div>
+}

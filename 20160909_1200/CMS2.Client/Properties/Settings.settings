@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CMS2.Client.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DeviceCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DeviceRevenueUnitId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">00000000-0000-0000-0000-000000000000</Value>
+    </Setting>
+    <Setting Name="DeviceBcoId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">00000000-0000-0000-0000-000000000000</Value>
+    </Setting>
+    <Setting Name="LocalDbServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.0.27</Value>
+    </Setting>
+    <Setting Name="LocalDbName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cms2</Value>
+    </Setting>
+    <Setting Name="LocalDbUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cmsuser</Value>
+    </Setting>
+    <Setting Name="LocalDbPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">P9ssW0rd</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

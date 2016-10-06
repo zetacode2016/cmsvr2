@@ -1,0 +1,4 @@
+2015/11/19 04:35:07 :: Shipment BL - ComputeCharges - SOA is not null :: Object reference not set to an instance of an object.
+2015/11/19 11:46:36 :: Shipment BL - ComputeCharges - SOA is not null :: Object reference not set to an instance of an object.
+2015/11/19 11:48:15 :: Shipment BL - ComputeCharges - SOA is not null :: Object reference not set to an instance of an object.
+2015/11/19 11:51:02 :: Shipment BL - ComputeCharges - SOA is not null :: Object reference not set to an instance of an object.

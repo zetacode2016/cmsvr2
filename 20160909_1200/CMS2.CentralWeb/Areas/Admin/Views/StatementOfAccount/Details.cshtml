@@ -1,0 +1,221 @@
+﻿@using GridMvc.Html
+@model CMS2.Entities.Models.StatementOfAccountModel
+
+<h4>SOA - Details</h4>
+
+@ViewBag.Message
+@{
+    if (Model != null)
+    {
+        <form class="col-md-12 form-horizontal">
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Company.AccountNo, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.Company.AccountNo, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalCurrentSubTotalString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalCurrentSubTotalString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Company.CompanyName, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.Company.CompanyName, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalCurrentVatAmountString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalCurrentVatAmountString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.StatementOfAccountNo, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.StatementOfAccountNo, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalCurrentTotalString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalCurrentTotalString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.StatementOfAccountDateString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.StatementOfAccountDateString, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalPreviousAmountDueString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalPreviousAmountDueString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.StatementOfAccountPeriod, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.StatementOfAccountPeriod, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalPreviousPaymentsString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalPreviousPaymentsString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.SoaDueDateString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.SoaDueDateString, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalPreviousAdjustmentsString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalPreviousAdjustmentsString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalBalancesFromPreviousString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalBalancesFromPreviousString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalPreviousBalanceString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalPreviousBalanceString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalCurrentChargesString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalCurrentChargesString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalPreviousSurchargeString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalPreviousSurchargeString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-pull-1">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TotalSoaAmountString, new { @class = "control-label col-md-2", @style = "width:40%; padding-right: 5px" })
+                        <div class="col-md-10" style="width: 60%;padding-left: 5px">
+                            @Html.TextBoxFor(m => m.TotalSoaAmountString, new { @class = "form-control", @readonly = true, @style = "width:100px; text-align: right;" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1">
+
+                </div>
+            </div>
+        </form>
+        <div class="form-group">
+            &nbsp;
+        </div>
+        <h4>Current Charges</h4>
+        if (Model.CurrentShipments != null)
+        {
+            @Html.Grid(Model.CurrentShipments).Named("gridCurrentShipments").Columns(columns =>
+            {
+                columns.Add(m => m.DateAcceptedString).Titled("Date");
+                columns.Add(m => m.AirwayBillNo).Titled("AWB No");
+                columns.Add(m => m.OriginCity.CityCode).Titled("Origin City");
+                columns.Add(m => m.DestinationCity.CityCode).Titled("Destination City");
+                columns.Add(m => m.ShipmentSubTotalString).Titled("Freight Charge");
+                columns.Add(m => m.ShipmentVatAmountString).Titled("VAT Amount");
+                columns.Add(m => m.ShipmentTotalString).Titled("Total");
+            })
+        }
+
+        <br />
+        <hr />
+        <h4>Balance From Previous Bill</h4>
+        if (Model.PreviousShipments != null)
+        {
+            @Html.Grid(Model.PreviousShipments).Named("gridPreviousShipments").Columns(columns =>
+            {
+                columns.Add(m => m.StatementOfAccount.StatementOfAccountDateString).Titled("SOA Date");
+                columns.Add(m => m.StatementOfAccount.StatementOfAccountNo).Titled("SOA No");
+                columns.Add(m => m.AirwayBillNo).Titled("AWB No");
+                columns.Add(m => m.PreviousAmountDueString).Titled("Previous Amount Due");
+                columns.Add(m => m.PreviousPaymentsString).Titled("Payments");
+                columns.Add(m => m.PreviousAdjustmentsString).Titled("Adjustments");
+                columns.Add(m => m.PreviousBalanceString).Titled("Balance");
+                columns.Add(m => m.SurchargeString).Titled("Surcharge");
+            })
+        }
+        <br />
+        <hr />
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="margin: 0">
+                <input id="adjustment" type="button" class="btn btn-default" value="Make Adjustment" onclick="location.href = '@Url.Action("Adjustment", "StatementOfAccount", new {id = Model.StatementOfAccountId})'" />
+                <input id="payment" type="button" class="btn btn-default" value="Make Payment" onclick="location.href = '@Url.Action("Payment", "StatementOfAccount", new {id = Model.StatementOfAccountId})'" />
+                @*<input id="ViewPrintable" name="Print" type="button" class="btn btn-default" value="View Printable" onclick="location.href = '@Url.Action("ViewPrintable", "StatementOfAccount", new {id = Model.StatementOfAccountId})'" />*@
+                @*<a href="@Url.Action("ViewPdf", "StatementOfAccount", new { id = Model.StatementOfAccountDate.ToString("yyyyMMdd") + "_" + Model.StatementOfAccountNo + "_" + Model.Company.AccountNo, branch = Model.Company.Area.Branch.BranchName })">
+                        <input id="ViewPrintable" name="Print" type="button" class="btn btn-default" value="View Printable">
+                    </a>*@
+                <a href="@Url.Action("ViewPdf", "StatementOfAccount", new { id = Model.PdfFileName, branch = Model.Company.City.BranchCorpOffice.BranchCorpOfficeName })">
+                    <input id="ViewPrintable" name="Print" type="button" class="btn btn-default" value="View Printable">
+                </a>
+            </div>
+        </div>
+    }
+}

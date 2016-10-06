@@ -1,0 +1,26 @@
+2016/04/12 10:55:48 :: Shipment BL - ComputeCharges :: Shipment count: 4
+2016/04/12 10:55:48 :: Shipment BL - ComputeCharges :: 3355aedc-3286-4e42-87f0-33e74e738b33
+2016/04/12 10:55:48 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges :: 9a8f777a-aecc-4dcd-a300-649256707686
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges :: 48f0b34c-eefa-461e-b07d-cb7ab3b97baa
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges :: 36c6f090-ae71-4f0a-b38b-f20f9adfd531
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 10:55:49 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges :: Shipment count: 4
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges :: 3355aedc-3286-4e42-87f0-33e74e738b33
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges :: 9a8f777a-aecc-4dcd-a300-649256707686
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges :: 48f0b34c-eefa-461e-b07d-cb7ab3b97baa
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - Done :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges :: 36c6f090-ae71-4f0a-b38b-f20f9adfd531
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/04/12 11:01:11 :: Shipment BL - ComputeCharges - Done :: 

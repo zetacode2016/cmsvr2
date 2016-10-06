@@ -1,0 +1,31 @@
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: Shipment count: 10
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: 2c93ff5a-0c71-4982-962f-2dd47cb13c6f
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: d03383c0-5966-4fbc-a5ab-429687dd4818
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: 1749cbc6-de09-4d25-b8c7-5a3838e024e3
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: a3125a9e-73a4-4c83-bde3-73246e2a460d
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: f52cd5a8-d4ef-480a-b9d1-aafbd62a31c8
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: eed64c14-7a89-4376-b73d-ac424b7e39d5
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: bd7c2b0d-f949-4ff8-9f12-affab6de32f5
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: 36058475-a2ea-4ce6-9f5d-b8062485e9b4
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:45 :: Shipment BL - ComputeCharges :: 75ab0260-709d-4b9a-b4fd-c9efff12a00b
+2016/02/13 01:13:46 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:46 :: Shipment BL - ComputeCharges - Done :: 
+2016/02/13 01:13:46 :: Shipment BL - ComputeCharges :: 50d40695-cd12-47bb-8607-ed68d796aee7
+2016/02/13 01:13:46 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/02/13 01:13:46 :: Shipment BL - ComputeCharges - Done :: 

@@ -1,0 +1,35 @@
+﻿@using GridMvc.Html
+@model List<CMS2.Entities.Models.StatementOfAccountModel>
+
+<h4>SOA - History</h4>
+
+<style type="text/css">
+    .numcolalign {
+        text-align: right;
+    }
+
+    .gridheader {
+        width: 170px; white-space: normal; height: 53px; word-wrap:normal; margin-right: 15px; vertical-align: bottom;display: table-cell; text-align: center
+    }
+</style>
+
+@if (Model != null)
+{
+    @Html.Grid(Model).Named("gridStatementOfAccount").Columns(columns =>
+    {
+        columns.Add(m => m.StatementOfAccountNo).Titled("SOA No").Sortable(true).Filterable(true).Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="Details?id=@m.StatementOfAccountId">@m.StatementOfAccountNo</a>).Css("gridheader");
+        columns.Add(m => m.StatementOfAccountDateString).Titled("Date").Css("grid-header-title");
+        columns.Add(m => m.HistoryAmountDueFromPreviousString).Titled("Amount Due from Previous Bill").Css("numcolalign gridheader");
+        columns.Add(m => m.HistoryAdjustmentsString).Titled("Adjustments").Css("numcolalign gridheader");
+        columns.Add(m => m.HistoryPaymentsString).Titled("Payments").Css("numcolalign gridheader");
+        columns.Add(m => m.HistoryPreviousBalanceString).Titled("Total Previous Balance").Css("numcolalign gridheader");
+        columns.Add(m => m.HistoryFreightChargesString).Titled("Total Freight Charges").Css("numcolalign gridheader");
+        columns.Add(m => m.HistorySurchargeString).Titled("Surcharge").Css("numcolalign gridheader");
+        columns.Add(m => m.HistoryCurrentChargesString).Titled("Total Current Charges").Css("numcolalign gridheader");
+        columns.Add(m => m.HistoryAmountDueString).Titled("Total Amount Due").Css("numcolalign gridheader");
+        
+    }).WithPaging(10)
+    <div class="form-group">
+        &nbsp;
+    </div>
+}

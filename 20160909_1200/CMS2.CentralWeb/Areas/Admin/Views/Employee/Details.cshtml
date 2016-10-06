@@ -1,0 +1,37 @@
+﻿@model CMS2.Entities.Employee
+<br />
+<h4>Employee Info</h4>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label", @style = "width:100%" })
+        <div class="col-md-10" style="width: 100%">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @readonly=true })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MiddleName, new { @class = "col-md-2 control-label", @style = "width:100%" })
+        <div class="col-md-10" style="width: 100%">
+            @Html.TextBoxFor(m => m.MiddleName, new { @class = "form-control", @readonly = true })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label", @style = "width:100%" })
+        <div class="col-md-10" style="width: 100%">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @readonly = true })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Birthdate, new { @class = "col-md-2 control-label", @style = "width:100%" })
+        <div class="col-md-10" style="width: 100%">
+            @Html.TextBoxFor(m => m.Birthdate, new { @class = "form-control", @readonly = true })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.RecordStatus, new { @class = "col-md-2 control-label", @style = "width:100%" })
+        <div class="col-md-10" style="width: 100%">
+            @Html.TextBoxFor(m => m.Record_Status, new { @class = "form-control", @readonly = true })
+        </div>
+    </div>
+    <div class="form-group">
+        &nbsp;
+    </div>

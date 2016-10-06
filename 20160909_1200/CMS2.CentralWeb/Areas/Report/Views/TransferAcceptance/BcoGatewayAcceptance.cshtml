@@ -1,0 +1,84 @@
+﻿@using GridMvc.Html
+@model CMS2.CentralWeb.Areas.Report.ViewModels.BcoGatewayAcceptanceSummaryViewModel
+<br />
+<h4>Gateway Acceptance - BCO To Gateway</h4>
+
+@using (Html.BeginForm("BcoGatewayAcceptance", "TransferAcceptance", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.AcceptanceDate, new { @class = "control-label col-md-2", @style = "width:30%; padding-right: 5px" })
+                <div class="col-md-8" style="width: 30%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.AcceptanceDate, new { @class = "form-control datecontrol" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.BranchCorpOfficeId, new {@class = "control-label col-md-2", @style = "width:30%; padding-right: 5px"})
+                <div class="col-md-10" style="width: 70%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.BranchCorpOfficeId, (SelectList) ViewBag.BCOs, new {@class = "form-control"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Gateway, new { @class = "control-label col-md-2", @style = "width:30%; padding-right: 5px" })
+                <div class="col-md-10" style="width: 70%; padding-left: 5px">
+                    @Html.DropDownListFor(m => m.Gateway, (SelectList)ViewBag.Gateways, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                <div class="control-label col-md-2" style="width: 30%; padding-right: 5px">&nbsp;</div>
+                <div class="col-md-8" style="width: 30%; padding-left: 5px">
+                    <input id="saveButton" type="submit" class="btn btn-default" value="Find"/>
+                </div>
+            </div>
+        </div>
+    </div>
+     <br/>
+    <div class="form-group">
+        <div class="col-md-12 col-md-push-1" style="margin:0">
+            @{
+    if (Model != null)
+                {
+                    if (Model.BcoGatewayAcceptanceViewModels != null)
+                    {
+                        @Html.Grid(Model.BcoGatewayAcceptanceViewModels).Named("gridBcoGatewayAcceptance").Columns(columns =>
+                   {
+                       columns.Add(m => m.Driver).Titled("Driver").Sortable(true).Filterable(true);
+                       columns.Add(m => m.Truck).Titled("Truck").Sortable(true).Filterable(true);
+                       columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @Ajax.ActionLink("View Shipments", "Shipments", new { acceptanceDate = m.AcceptanceDate, driver = m.Driver, gateway = m.Gateway, acceptancetype = m.AcceptanceType, scannedby = m.ScannedBy }, new AjaxOptions { UpdateTargetId = "Shipments" }));
+                   }).WithPaging(10)
+                    }
+                }
+            }
+        </div>
+    </div>
+    <div id="Shipments" class="form-group" >
+    </div>
+
+}
+@section scripts{
+
+    <script>
+
+        $(function () {
+            $('.datecontrol').datepicker({dateformat:"MM/dd/yyyy"});
+        });
+
+    </script>
+}

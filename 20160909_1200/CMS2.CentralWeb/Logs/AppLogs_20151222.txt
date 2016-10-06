@@ -1,0 +1,12 @@
+2015/12/22 17:26:45 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/12/22 17:26:45 :: Shipment BL - ComputeCharges :: 6548b590-d624-40a8-952c-18fa263c6235
+2015/12/22 17:26:45 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/12/22 17:26:45 :: Shipment BL - ComputeCharges - Done :: 
+2015/12/22 17:26:58 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/12/22 17:26:58 :: Shipment BL - ComputeCharges :: 6548b590-d624-40a8-952c-18fa263c6235
+2015/12/22 17:26:58 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/12/22 17:26:58 :: Shipment BL - ComputeCharges - Done :: 
+2015/12/22 17:28:57 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2015/12/22 17:28:58 :: Shipment BL - ComputeCharges :: 6548b590-d624-40a8-952c-18fa263c6235
+2015/12/22 17:28:58 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2015/12/22 17:28:58 :: Shipment BL - ComputeCharges - Done :: 

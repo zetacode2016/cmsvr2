@@ -1,0 +1,3 @@
+2016/05/27 15:26:45 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/27 15:26:47 :: Shipment BL - ComputeCharges :: Shipment count: 0
+2016/05/27 15:46:15 :: Shipment BL - ComputeCharges :: Shipment count: 0

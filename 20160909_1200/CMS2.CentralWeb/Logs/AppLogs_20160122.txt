@@ -1,0 +1,4 @@
+2016/01/22 20:07:33 :: Shipment BL - ComputeCharges :: Shipment count: 1
+2016/01/22 20:07:33 :: Shipment BL - ComputeCharges :: 5ec5d8be-6d60-4bb1-ba24-90cd254b82cc
+2016/01/22 20:07:33 :: Shipment BL - ComputeCharges - ComputeBasicCharges :: 
+2016/01/22 20:07:34 :: Shipment BL - ComputeCharges - Done :: 

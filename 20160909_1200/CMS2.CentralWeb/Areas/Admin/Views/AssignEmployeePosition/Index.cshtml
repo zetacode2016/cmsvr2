@@ -1,0 +1,21 @@
+﻿@using GridMvc.Html
+@model List<CMS2.CentralWeb.Areas.Admin.ViewModels.EmployeePositionMappingViewModel>
+<br />
+<h4>Employee Position Assignment</h4>
+
+@{
+    if (Model != null)
+    {
+        @Html.Grid(Model).Named("gridEmployeePositionMapping").Columns(columns =>
+        {
+            columns.Add(m => m.Employee.FullName).Titled("Employee Name").Sortable(true).Filterable(true);
+            columns.Add(m => m.Position.PositionName).Titled("Position").Sortable(true).Filterable(true);
+            columns.Add(m => m.AssignedLocationName).Titled("Location").Sortable(true).Filterable(true);
+            columns.Add(m => m.DateAssignedString).Titled("Date Assigned").Sortable(true).Filterable(true);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="AssignEmployeePosition/Edit?id=@m.EmployeePositionMappingId">Edit</a>);
+            columns.Add().Encoded(false).Sanitized(false).RenderValueAs(m => @<a href="AssignEmployeePosition/Delete?id=@m.EmployeePositionMappingId">Delete</a>);
+        }).WithPaging(20)
+    }
+}
+<br/>
+@Html.ActionLink("Add Employee Assignment", "Add", null, new { @class = "btn btn-default" })

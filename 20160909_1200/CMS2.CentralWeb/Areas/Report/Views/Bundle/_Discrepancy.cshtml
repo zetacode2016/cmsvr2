@@ -1,0 +1,14 @@
+﻿@using GridMvc.Html
+@model List<CMS2.CentralWeb.Areas.Report.ViewModels.BundleShipmentDiscrepancyViewModel>
+
+    @{
+        if (Model != null)
+        {
+            @Html.Grid(Model).Named("gridDiscrepancy").Columns(columns =>
+               {
+                   columns.Add(m => m.AirwayBillNo).Titled("AWB").Sortable(true).Filterable(true);
+                   columns.Add(m => m.Difference).Titled("Difference").Sortable(true).Filterable(true);
+
+               }).WithPaging(30)
+        }
+    }

@@ -1,0 +1,77 @@
+﻿@using GridMvc.Html
+@model CMS2.CentralWeb.Areas.Shipment.ViewModels.TrackingEntryViewModel
+<br />
+<h4>Tracking Entry</h4>
+
+@using (Html.BeginForm("Index", "TrackingEntry", FormMethod.Post, new { @class = "col-md-12 form-horizontal ", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger", id = "validationsummary" })
+
+    <br />
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Employee", new { @class = "control-label col-md-2", @style = "width:30%; padding-right: 5px" })
+                <div class="col-md-8" style="width: 30%; padding-left: 5px">
+                    @Html.DropDownListFor(m=>m.EmployeeId,(SelectList)ViewBag.Employees, new { @class = "form-control" })
+                </div>
+                <div class="col-md-2" style="width: 20%; padding-left: 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-pull-1">
+            <div class="form-group">
+                @Html.Label("Date Range", new { @class = "control-label col-md-2", @style = "width:30%; padding-right: 5px" })
+                <div class="col-md-5" style="width: 25%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.DateFrom,  new { @class = "form-control datecontrol" })
+                </div>
+                <div class="col-md-5" style="width: 25%; padding-left: 5px">
+                    @Html.TextBoxFor(m => m.DateUntil, new { @class = "form-control datecontrol" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-push-3">
+            <div class="form-group">
+                <div class="col-md-12" style="width: 100%; padding-left: 5px">
+                    <input id="saveButton" type="submit" class="btn btn-default" value="Find" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12 col-md-push-2" style="margin:0">
+            @{
+    if (Model != null)
+                {
+                    if (Model.TrackingEntryDetailsViewModels != null)
+                    {
+                        @Html.Grid(Model.TrackingEntryDetailsViewModels).Named("gridTrackingEntryDetails").Columns(columns =>
+                        {
+                            columns.Add(m => m.EmployeeName).Titled("Scanned By").Sortable(true).Filterable(true);
+                            columns.Add(m => m.Date).Titled("Date").Sortable(true).Filterable(true);
+                            columns.Add(m => m.AirwayBilllNo).Titled("AWB").Sortable(true).Filterable(true);
+                            columns.Add(m => m.CargoNo).Titled("Cargo No").Sortable(true).Filterable(true);
+                            columns.Add(m => m.Quantity).Titled("Quantity").Sortable(true).Filterable(true);
+                        }).WithPaging(20) 
+                    }
+                }
+            }
+            <br />
+        </div>
+    </div>
+}
+@section scripts{
+
+    <script>
+
+        $(function () {
+            $('.datecontrol').datepicker({dateformat:"MM/dd/yyyy"});
+        });
+
+    </script>
+}
